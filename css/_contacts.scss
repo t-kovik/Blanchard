@@ -1,0 +1,206 @@
+@import "colors";
+
+.contacts {
+  margin-bottom: 0;
+
+  &__title {
+    @media (max-width: 576px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 35.45%;
+    padding-left: 40px;
+    border: solid $grayCA;
+    border-width: 1px 1px 0 0;
+    background: $white;
+    @media (max-width: 1200px) {
+      flex-basis: 47.5%;
+      padding-top: 23px;
+      padding-left: 15px;
+    }
+
+    @media (max-width: 768px) {
+      flex-basis: 56%;
+      padding-left: 50px;
+      padding-right: 15px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 15px;
+      border: 0;
+    }
+  }
+
+  &__wrapper {
+    @media (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__prop {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+
+    @media (max-width: 576px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  &__address {
+    @media (max-width: 576px) {
+      font-size: 14px;
+      line-height: 19px;
+      order: 1;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 25px;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    @media (max-width: 576px) {
+      order: 3;
+      font-size: 18px;
+      line-height: 32px;
+      margin-top: 20px;
+    }
+  }
+
+  &__subtitle--nth-2 {
+    @media (max-width: 576px) {
+      margin-top: 8px;
+    }
+  }
+
+  &__box {
+    order: 3;
+  }
+
+  &__form {
+    max-width: 400px;
+  }
+
+  &__form-field {
+    padding: 4px 24px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $color-main;
+    border-radius: 100px;
+    outline: 0;
+
+    &:focus {
+      border: 1px solid $purple;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 335px;
+    }
+
+    &:first-child {
+      margin-top: 16px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__form-btn {
+    margin-top: 14px;
+    margin-bottom: 10px;
+    padding: 17px 35px;
+    border: 2px solid $purple;
+    border-radius: 100px;
+    color: $purple;
+    font-weight: 700;
+
+    @media (max-width: 576px) {
+      padding: 10px 35px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__link {
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+
+    @media (max-width: 1200px) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 576px) {
+      margin-top: 6px;
+      margin-bottom: 30px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--wh {
+      margin-right: 20px;
+      background: url("../img/contacts/whatsup.svg") center no-repeat;
+      background-size: cover;
+
+      @media (max-width: 1200px) {
+        margin-right: 30px;
+      }
+    }
+
+    &--tg {
+      background: url("../img/contacts/telegram.svg") center no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  &__map {
+    flex-basis: 64.55%;
+    width: 100%;
+    height: 700px;
+
+    @media (max-width: 1200px) {
+      flex-basis: 52.5%;
+    }
+
+
+    @media (max-width: 768px) {
+      flex-basis: 44%;
+    }
+
+    @media (max-width: 576px) {
+      flex-basis: auto;
+      height: 320px;
+      order: 2;
+      margin-top: 15px;
+    }
+  }
+
+  ::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}

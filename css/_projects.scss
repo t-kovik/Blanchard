@@ -1,0 +1,173 @@
+@import "colors";
+
+.projects {
+
+  &__title {
+    @media (max-width: 576px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    max-width: 1050px;
+
+    @media (max-width: 768px) {
+      max-width: 640px;
+    }
+  }
+
+  &__link {
+    color: $purple;
+    font-weight: 600;
+  }
+
+  &__partners {
+    &-title {
+      margin-top: 18px;
+      margin-bottom: 23px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+
+      @media (max-width: 768px) {
+        margin-top: 26px;
+        margin-bottom: 29px;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+        line-height: 32px;
+        margin: 10px 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 150px;
+      border: 1px solid $grayCA;
+
+      @media (max-width: 1200px)  {
+        min-height: 128px;
+      }
+
+      @media (max-width: 768px)  {
+        min-height: 106px;
+      }
+
+      @media (max-width: 576px)  {
+        max-height: 65px;
+        min-height: 65px;
+      }
+    }
+
+    &-link {
+      @media (max-width: 576px)  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:focus {
+        outline: 2px solid $purple;
+        .projects__partners-img {
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    &-img {
+      filter: grayscale(100%) contrast(0);
+      @media (max-width: 576px)  {
+        width: 54%;
+      }
+
+      &:hover {
+        @media (min-width: 1024px)  {
+          filter: grayscale(0);
+        }
+      }
+    }
+
+  }
+}
+
+
+
+.tooltip {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  background: url("../img/projects/tooltip.svg") center no-repeat;
+  cursor: pointer;
+}
+
+
+.tooltip .tooltip-text {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  z-index: 1;
+  margin-bottom: 13px;
+  margin-left: -132px;
+  padding: 8px 11px;
+  width: 264px;
+  visibility: hidden;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: $white;
+  background: $grayCA;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.tooltip .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $grayCA transparent transparent transparent;
+}
+
+.swiper-partners {
+  position: relative;
+  padding: 0 75px;
+  min-width: 0;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    padding: 0 54px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 47px;
+  }
+
+  .btn-nav {
+    position: absolute;
+    top:40%;
+    left: 0;
+    z-index: 10;
+    background: url("../img/projects/arrow.png") center no-repeat;
+
+    @media (max-width: 576px) {
+      top: 30%;
+    }
+  }
+
+  .btn-next {
+    left: auto;
+    right: 0;
+  }
+}
