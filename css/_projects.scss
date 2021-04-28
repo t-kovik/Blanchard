@@ -86,6 +86,7 @@
       &:hover {
         @media (min-width: 1024px)  {
           filter: grayscale(0);
+          transition: filter 0.3s ease-in-out;
         }
       }
     }
@@ -159,7 +160,23 @@
     top:40%;
     left: 0;
     z-index: 10;
-    background: url("../img/projects/arrow.png") center no-repeat;
+    background: url("../img/projects/arrow.svg") center no-repeat $whiteEC;
+
+    @media (min-width: 1024px) {
+      &:not(.swiper-button-disabled):hover {
+        background-color: $purple;
+        transition: background-color 0.3s ease-in-out;
+      }
+    }
+
+    &:active {
+      background: $purple79;
+      border: 3px solid $purpleD1;
+    }
+
+    &:focus {
+      outline: 2px solid $purple79;
+    }
 
     @media (max-width: 576px) {
       top: 30%;

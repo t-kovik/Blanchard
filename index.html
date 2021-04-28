@@ -31,41 +31,43 @@
         <span class="close-line"></span>
         <span class="close-line"></span>
       </button>
-      <a class="logo header__logo link" href="#" aria-label="Логотип Бланчард>"></a>
-      <nav class="header__nav header__nav-mobile">
-        <ul class="header__nav-list">
-          <li class="header__nav-item"><a class="header__nav-link link" href="#about">О нас</a></li>
-          <li class="header__nav-item"><a class="header__nav-link link" href="#gallery">Галерея</a></li>
-          <li class="header__nav-item"><a class="header__nav-link link" href="#catalog">Каталог</a></li>
-          <li class="header__nav-item"><a class="header__nav-link link" href="#events">События</a></li>
-          <li class="header__nav-item"><a class="header__nav-link link" href="#editions">Издания</a></li>
-          <li class="header__nav-item"><a class="header__nav-link link" href="#projects">Проекты</a></li>
-          <li class="header__nav-item"><a class="header__nav-link link" href="#contacts">Контакты</a></li>
-          <li>
-            <button class="btn header__btn fs18" aria-label="Войти">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                    fill="white"/>
-              </svg>
-              Войти
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <a class="logo header__logo link" href="#" aria-label="Логотип Бланчард>">
+        <img src="./images/logo.svg" alt="Логотип Бланчард">
+      </a>
+      <div class="header__menu">
+        <nav class="header__nav header__nav-mobile">
+          <ul class="header__nav-list list">
+            <li class="header__nav-item"><a class="header__nav-link link" href="#about">О нас</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#gallery">Галерея</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#catalog">Каталог</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#events">События</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#editions">Издания</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#projects">Проекты</a></li>
+            <li class="header__nav-item"><a class="header__nav-link link" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="btn header__btn" aria-label="Войти">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                fill="white"/>
+          </svg>
+          Войти
+        </button>
+      </div>
     </div>
   </div>
   <div class="header__bottom">
     <div class="container header__container header__container--bottom d-flex">
-      <ul class="header__list">
+      <ul class="header__list list">
         <li class="header__list-item">
           <button class="btn header__list-btn" aria-label="Реализм">Реализм
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L0.999998 1" stroke="white"/>
             </svg>
           </button>
-          <ul class="dropdown dropdown__realism" data-simplebar>
+          <ul class="dropdown dropdown__realism list" data-simplebar>
             <li class="dropdown__item dropdown__realism-item"><a class="dropdown__link" href="#">Тинторето</a></li>
             <li class="dropdown__item dropdown__realism-item"><a class="dropdown__link" href="#">Фридрих</a></li>
             <li class="dropdown__item dropdown__realism-item"><a class="dropdown__link" href="#">Леонардо</a></li>
@@ -82,7 +84,7 @@
               <path d="M11 1L6 6L0.999998 1" stroke="white"/>
             </svg>
           </button>
-          <ul class="dropdown dropdown__impressionism" data-simplebar>
+          <ul class="dropdown dropdown__impressionism list" data-simplebar>
             <li class="dropdown__item dropdown__impressionism-item"><a class="dropdown__link" href="#">Моне</a></li>
             <li class="dropdown__item dropdown__impressionism-item"><a class="dropdown__link" href="#">Сислей</a></li>
             <li class="dropdown__item dropdown__impressionism-item"><a class="dropdown__link" href="#">Мане</a></li>
@@ -99,7 +101,7 @@
               <path d="M11 1L6 6L0.999998 1" stroke="white"/>
             </svg>
           </button>
-          <ul class="dropdown dropdown__post" data-simplebar>
+          <ul class="dropdown dropdown__post list" data-simplebar>
             <li class="dropdown__item dropdown__post-item"><a class="dropdown__link" href="#">Ван Гог</a></li>
             <li class="dropdown__item dropdown__post-item"><a class="dropdown__link" href="#">Сезанн</a></li>
             <li class="dropdown__item dropdown__post-item"><a class="dropdown__link" href="#">Леонардо</a></li>
@@ -116,7 +118,7 @@
               <path d="M11 1L6 6L0.999998 1" stroke="white"/>
             </svg>
           </button>
-          <ul class="dropdown dropdown__avant-garde" data-simplebar>
+          <ul class="dropdown dropdown__avant-garde list" data-simplebar>
             <li class="dropdown__item dropdown__avant-garde-item"><a class="dropdown__link" href="#">Кандинский</a></li>
             <li class="dropdown__item dropdown__avant-garde-item"><a class="dropdown__link" href="#">Маринетти</a></li>
             <li class="dropdown__item dropdown__avant-garde-item"><a class="dropdown__link" href="#">Малевич</a></li>
@@ -133,7 +135,7 @@
               <path d="M11 1L6 6L0.999998 1" stroke="white"/>
             </svg>
           </button>
-          <ul class="dropdown dropdown__futurism" data-simplebar>
+          <ul class="dropdown dropdown__futurism list" data-simplebar>
             <li class="dropdown__item dropdown__futurism-item"><a class="dropdown__link" href="#">Карра</a></li>
             <li class="dropdown__item dropdown__futurism-item"><a class="dropdown__link" href="#">Прателла</a></li>
             <li class="dropdown__item dropdown__futurism-item"><a class="dropdown__link" href="#">Северини</a></li>
@@ -157,7 +159,7 @@
           </svg>
         </button>
         <label class="header__form-label d-flex">
-          <input class="header__form-input fs18" type="search" tabindex="0" placeholder="Поиск по сайту">
+          <input class="header__form-input" type="search" tabindex="0" placeholder="Поиск по сайту">
           <span class="header__btn-close header__form-close btn">
              <span class="close-line"></span>
              <span class="close-line"></span>
@@ -167,7 +169,8 @@
     </div>
   </div>
 </header>
-<main>
+<main class="main">
+  <h1 class="main__title">"Blanchard" — художественная галерея</h1>
   <section class="section hero">
     <div class="swiper-container">
       <div class="swiper-wrapper swiper-wrapper--hero">
@@ -175,17 +178,15 @@
         <div class="hero__wrapper hero__wrapper--back-2 swiper-slide"></div>
         <div class="hero__wrapper hero__wrapper--back-3 swiper-slide"></div>
       </div>
-      <div class="container hero__container">
-        <div class="hero__plate">
-          <h1 class="title hero__title">Прикоснитесь к прекрасному</h1>
-          <p class="hero__subtitle">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
-            заданий создаёт предпосылки для новых предложений.</p>
-          <a class="hero__btn btn--focus" href="#contacts">Подписаться на рассылку</a>
-        </div>
+    </div>
+    <div class="container hero__container">
+      <div class="hero__plate">
+        <h2 class="title hero__title">Прикоснитесь к прекрасному</h2>
+        <p class="hero__subtitle">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
+          заданий создаёт предпосылки для новых предложений.</p>
+        <a class="hero__btn btn--focus" href="#contacts">Подписаться на рассылку</a>
       </div>
     </div>
-
-
   </section>
   <section class="section about" id="about">
     <div class="container about__container">
@@ -207,7 +208,6 @@
           <h2 class="section__title gallery__title">Галерея</h2>
           <form>
             <label>Фильтровать по:
-              <br>
               <select class="gallery__select" size="3" tabindex="0" aria-label="Выбор фильтра">
                 <option class="gallery__option" value="author" tabindex="0">Автор</option>
                 <option class="gallery__option" value="trend" tabindex="0">Направление</option>
@@ -218,7 +218,7 @@
         </div>
         <div class="gallery__note gallery__note-mobile">
           Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-          <span class="text-l-purple">авторизуйтесь</span>,
+          <a class="gallery__link" href="/">авторизуйтесь</a>,
           либо воспользуйтесь лицензией.
         </div>
       </div>
@@ -346,7 +346,7 @@
     <div class="container catalog__container">
       <div class="catalog__wrapper">
         <h2 class="section__title catalog__title">Каталог</h2>
-        <ul class="catalog__countries">
+        <ul class="catalog__countries list">
           <li class="catalog__country catalog__country--fr" data-target="#fr" tabindex="0"></li>
           <li class="catalog__country catalog__country--de" data-target="#de" tabindex="0"></li>
           <li class="catalog__country catalog__country--it active" data-target="#it" tabindex="0"></li>
@@ -367,22 +367,24 @@
             </div>
             <div class="catalog__artist-name">Бартелеми д’Эйк</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">ок. 1420 — после 1470</span><br>
-              Имя Бартелеми д’Эйка давно известно по историческим документам. Он был придворным художником
-              короля Рене Доброго и имел высокую репутацию как выдающийся мастер, о чём свидетельствуют
-              отзывы современников. Однако конкретной информации о нём немного.
-              Исследователи считают, что Бартелеми имел нидерландское (фламандское) происхождение, а
-              обучение прошёл в мастерской Яна Ван Эйка, где, вероятно, контактировал с Робером Кампеном.
-              Эта версия не имеет документального подтверждения, однако очень популярна среди учёных,
-              поскольку в произведениях Бартелеми видна нидерландская выучка. Его мать была родом из
-              Маастрихта в герцогстве Лимбург, во втором браке она стала женой некоего Пьера дю Биллана,
-              также уроженца «немецкой стороны», который был художником, вышивальщиком и придворным короля
-              Рене с 1441 по 1470 год. В отличие от Бартелеми, который жил в непосредственной близости от
-              короля, его отчим имел собственную мастерскую, и, кроме того, ему доверяли политические
-              поручения в Провансе. В 1444 году имя Бартелеми впервые упоминается в документе, который
-              сообщает, что «художник Бартоломеус де Айк» проживает в Эксе. В 1447 году Бартелеми
-              поступает на службу к королю Рене, причём его мастерская располагается в соседнем с
-              королевскими покоями помещении, что свидетельствует о высокой степени уважения и доверия.
+              <span class="catalog__artist-years">ок. 1420 — после 1470</span>
+              <p>
+                Имя Бартелеми д’Эйка давно известно по историческим документам. Он был придворным художником
+                короля Рене Доброго и имел высокую репутацию как выдающийся мастер, о чём свидетельствуют
+                отзывы современников. Однако конкретной информации о нём немного.
+                Исследователи считают, что Бартелеми имел нидерландское (фламандское) происхождение, а
+                обучение прошёл в мастерской Яна Ван Эйка, где, вероятно, контактировал с Робером Кампеном.
+                Эта версия не имеет документального подтверждения, однако очень популярна среди учёных,
+                поскольку в произведениях Бартелеми видна нидерландская выучка. Его мать была родом из
+                Маастрихта в герцогстве Лимбург, во втором браке она стала женой некоего Пьера дю Биллана,
+                также уроженца «немецкой стороны», который был художником, вышивальщиком и придворным короля
+                Рене с 1441 по 1470 год. В отличие от Бартелеми, который жил в непосредственной близости от
+                короля, его отчим имел собственную мастерскую, и, кроме того, ему доверяли политические
+                поручения в Провансе. В 1444 году имя Бартелеми впервые упоминается в документе, который
+                сообщает, что «художник Бартоломеус де Айк» проживает в Эксе. В 1447 году Бартелеми
+                поступает на службу к королю Рене, причём его мастерская располагается в соседнем с
+                королевскими покоями помещении, что свидетельствует о высокой степени уважения и доверия.
+              </p>
             </div>
           </div>
           <div class="artist-info catalog__artist" id="orosia">
@@ -392,18 +394,20 @@
             </div>
             <div class="catalog__artist-name">Мастер Орозия</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">XIV век</span><br>
-              средневековой анонимный мастер книжной миниатюры, работавший в Париже и Авиньоне в конце XIV
-              — начале XV веков. Своё имя художник получил по рукописи «История Орозия», частично
-              основанной на исторических работах теолога и историка V века Орозия. В настоящее время
-              манускрипт хранится в Национальной библиотеке Франции.
-              Некоторые исследователи считают, что Мастер Орозия был художником из Богемии, получившим
-              образование во Франции, позднее он работал над иллюминированием рукописей в Праге. Вместе с
-              другими художниками Мастер Орозия выполнил иллюстрации для рукописи «Града Божьего»
-              Августина, созданной во Франции около 1410 (Музей искусств Филадельфии). Позднее Мастер
-              Орозия вместе с двумя другими миниатюристами Мастером Бедфорда и Мастером Бусико
-              иллюстрировал бревиарий для дофина Людовика де Валуа. В этой работе очевидно влияние
-              миниатюр братьев Лимбург.
+              <span class="catalog__artist-years">XIV век</span>
+              <p>
+                Cредневековой анонимный мастер книжной миниатюры, работавший в Париже и Авиньоне в конце XIV
+                — начале XV веков. Своё имя художник получил по рукописи «История Орозия», частично
+                основанной на исторических работах теолога и историка V века Орозия. В настоящее время
+                манускрипт хранится в Национальной библиотеке Франции.
+                Некоторые исследователи считают, что Мастер Орозия был художником из Богемии, получившим
+                образование во Франции, позднее он работал над иллюминированием рукописей в Праге. Вместе с
+                другими художниками Мастер Орозия выполнил иллюстрации для рукописи «Града Божьего»
+                Августина, созданной во Франции около 1410 (Музей искусств Филадельфии). Позднее Мастер
+                Орозия вместе с двумя другими миниатюристами Мастером Бедфорда и Мастером Бусико
+                иллюстрировал бревиарий для дофина Людовика де Валуа. В этой работе очевидно влияние
+                миниатюр братьев Лимбург.
+              </p>
             </div>
           </div>
           <div class="artist-info catalog__artist" id="fouke">
@@ -413,14 +417,16 @@
             </div>
             <div class="catalog__artist-name">Жан Фуке</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">ок. 1420 — 1481</span><br>
-              Документированных свидетельств о жизни художника сохранилось крайне мало.
-              Жан Фуке родился в г. Тур в долине Луары, который во второй половине XV в. стал резиденцией
-              французских королей Карла VII и Людовика XI и одним из главных художественных центров
-              Франции. О годах его молодости сведений немного: вероятно, в начале 1440-х гг. Фуке учился в
-              Париже, а затем первым из французских художников отправился в Италию и познакомился с
-              искусством итальянского Возрождения. Между 1444 и 1446 он пишет портрет папы Евгения IV,
-              вызвавший восхищение итальянцев.
+              <span class="catalog__artist-years">ок. 1420 — 1481</span>
+              <p>
+                Документированных свидетельств о жизни художника сохранилось крайне мало.
+                Жан Фуке родился в г. Тур в долине Луары, который во второй половине XV в. стал резиденцией
+                французских королей Карла VII и Людовика XI и одним из главных художественных центров
+                Франции. О годах его молодости сведений немного: вероятно, в начале 1440-х гг. Фуке учился в
+                Париже, а затем первым из французских художников отправился в Италию и познакомился с
+                искусством итальянского Возрождения. Между 1444 и 1446 он пишет портрет папы Евгения IV,
+                вызвавший восхищение итальянцев.
+              </p>
             </div>
 
           </div>
@@ -429,7 +435,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1400 по 1499 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Анастасия</li>
                 <li class="catalog__list-item">Дюве, Жан</li>
                 <li class="catalog__list-item">Домбе, Гийом</li>
@@ -466,7 +472,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1500 по 1599 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Анастасия</li>
                 <li class="catalog__list-item">Дюве, Жан</li>
                 <li class="catalog__list-item">Домбе, Гийом</li>
@@ -493,7 +499,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1600 по 1699 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Анастасия</li>
                 <li class="catalog__list-item">Дюве, Жан</li>
                 <li class="catalog__list-item">Домбе, Гийом</li>
@@ -520,7 +526,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1700 по 1799 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Анастасия</li>
                 <li class="catalog__list-item">Дюве, Жан</li>
                 <li class="catalog__list-item">Домбе, Гийом</li>
@@ -547,7 +553,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1800 по 1899 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Анастасия</li>
                 <li class="catalog__list-item">Дюве, Жан</li>
                 <li class="catalog__list-item">Домбе, Гийом</li>
@@ -574,7 +580,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1900 по 1999 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Анастасия</li>
                 <li class="catalog__list-item">Дюве, Жан</li>
                 <li class="catalog__list-item">Домбе, Гийом</li>
@@ -601,7 +607,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 2000 г.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Анастасия</li>
                 <li class="catalog__list-item">Дюве, Жан</li>
                 <li class="catalog__list-item">Домбе, Гийом</li>
@@ -635,18 +641,20 @@
             </div>
             <div class="catalog__artist-name">Михаэль Вольгемут</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years"> 1434 — 30 ноября 1519</span><br>
-              Немецкий живописец, гравёр и резчик по дереву. Представитель нюрнбергской школы живописи. В
-              его мастерской в 1486-89 годах учился Альбрехт Дюрер. Вольгемут выполнял заказ саксонского
-              курфюрста Фридриха Мудрого по оформлению его дворца в Виттенберге (утрачен во Вторую мировую
-              войну).
-              Вероятно, Михаэль Вольгемут обучался ремеслу на работах фламандских живописцев. Вольгемут
-              женился на вдове своего работодателя Ганса Плейденвурфа и получил его мастерскую. Вместе со
-              своим приёмным сыном Вильгельмом Плейденвурфом иллюстрировал «Нюрнбергскую хронику».
-              К лучшим работам Вольгемута относятся: алтарь Перингсдёрфферов (ныне в Церкви мира в
-              Нюрнберге), резной, украшенный живописью алтарь церкви св. Марии в Цвиккау, роспись зала
-              ратуши в Госларе, алтарь в Городской церкви Иоанна Крестителя в Швабахе и четыре алтарные
-              панели в мюнхенской пинакотеке. Вольгемут писал также портреты.
+              <span class="catalog__artist-years"> 1434 — 30 ноября 1519</span>
+              <p>
+                Немецкий живописец, гравёр и резчик по дереву. Представитель нюрнбергской школы живописи. В
+                его мастерской в 1486-89 годах учился Альбрехт Дюрер. Вольгемут выполнял заказ саксонского
+                курфюрста Фридриха Мудрого по оформлению его дворца в Виттенберге (утрачен во Вторую мировую
+                войну).
+                Вероятно, Михаэль Вольгемут обучался ремеслу на работах фламандских живописцев. Вольгемут
+                женился на вдове своего работодателя Ганса Плейденвурфа и получил его мастерскую. Вместе со
+                своим приёмным сыном Вильгельмом Плейденвурфом иллюстрировал «Нюрнбергскую хронику».
+                К лучшим работам Вольгемута относятся: алтарь Перингсдёрфферов (ныне в Церкви мира в
+                Нюрнберге), резной, украшенный живописью алтарь церкви св. Марии в Цвиккау, роспись зала
+                ратуши в Госларе, алтарь в Городской церкви Иоанна Крестителя в Швабахе и четыре алтарные
+                панели в мюнхенской пинакотеке. Вольгемут писал также портреты.
+              </p>
             </div>
           </div>
           <div class="artist-info visible  catalog__artist" id="cit">
@@ -656,15 +664,17 @@
             </div>
             <div class="catalog__artist-name">Бартоломеус Цайтблом</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">ок. 1455 — ок. 1520</span><br>
-              Hемецкий художник, мастер алтарной живописи. Учился рисовать в мастерской своего отчима
-              Херлина в Нёрдлингене. С 1482 года жил в Ульме, где после женитьбы на дочери художника
-              Шюхлина, стал владельцем его мастерской. Созданные в его мастерской и под его руководством
-              алтари демонстрируют развитие местных, южногерманских художественных школ стиля поздней
-              готики, имевших общий источник в старонидерландском искусстве. Одним из признаков школы
-              Цейтблома является изображение плотно сомкнувшихся групп людей с застывшими выражениями лиц.
-              В Штутгартской государственной галерее хранятся Кильхбергерский, Эшахский и Хербергерский
-              алтари работы Цейтблома.
+              <span class="catalog__artist-years">ок. 1455 — ок. 1520</span>
+              <p>
+                Hемецкий художник, мастер алтарной живописи. Учился рисовать в мастерской своего отчима
+                Херлина в Нёрдлингене. С 1482 года жил в Ульме, где после женитьбы на дочери художника
+                Шюхлина, стал владельцем его мастерской. Созданные в его мастерской и под его руководством
+                алтари демонстрируют развитие местных, южногерманских художественных школ стиля поздней
+                готики, имевших общий источник в старонидерландском искусстве. Одним из признаков школы
+                Цейтблома является изображение плотно сомкнувшихся групп людей с застывшими выражениями лиц.
+                В Штутгартской государственной галерее хранятся Кильхбергерский, Эшахский и Хербергерский
+                алтари работы Цейтблома.
+              </p>
             </div>
           </div>
           <div class="artist-info catalog__artist" id="martin">
@@ -674,17 +684,19 @@
             </div>
             <div class="catalog__artist-name">Мартин Шонгауэр</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">1450 — 2 февраля 1491</span><br>
-              На творчество Шонгауэра сильное влияние оказали Рогир ван дер Вейден и неизвестный по имени
-              гравёр Мастер E. S.. Картин художника до нас дошло очень немного, самые ранние из них
-              датируются не ранее 1469 года. Самая замечательная из них, «Мадонна в беседке из роз», была
-              написана для кольмарской церкви св. Мартина. Несомненно, Шонгауэру принадлежит также
-              хранящийся в кольмарском музее складень, на внешней стороне которого изображено, в фигурах
-              натуральной величины, Благовещение, а на внутренней стороне Богоматерь, поклоняющаяся
-              Младенцу-Христу, и св. Антоний с заказчиком этой иконы. Почти с полной достоверностью
-              приписываются ему два «Святых Семейства», одно в мюнхенской Старой пинакотеке, а другое в
-              Венском музее. Все эти картины сильно отзываются направлением фландрской школы, но в
-              отношении деликатности исполнения уступают работам её главных представителей.
+              <span class="catalog__artist-years">1450 — 2 февраля 1491</span>
+              <p>
+                На творчество Шонгауэра сильное влияние оказали Рогир ван дер Вейден и неизвестный по имени
+                гравёр Мастер E. S.. Картин художника до нас дошло очень немного, самые ранние из них
+                датируются не ранее 1469 года. Самая замечательная из них, «Мадонна в беседке из роз», была
+                написана для кольмарской церкви св. Мартина. Несомненно, Шонгауэру принадлежит также
+                хранящийся в кольмарском музее складень, на внешней стороне которого изображено, в фигурах
+                натуральной величины, Благовещение, а на внутренней стороне Богоматерь, поклоняющаяся
+                Младенцу-Христу, и св. Антоний с заказчиком этой иконы. Почти с полной достоверностью
+                приписываются ему два «Святых Семейства», одно в мюнхенской Старой пинакотеке, а другое в
+                Венском музее. Все эти картины сильно отзываются направлением фландрской школы, но в
+                отношении деликатности исполнения уступают работам её главных представителей.
+              </p>
             </div>
           </div>
         </div>
@@ -692,7 +704,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1400 по 1499 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бургкмайр, Ханс</li>
                 <li class="catalog__list-item">Виц, Конрад</li>
                 <li class="catalog__list-item">Гольбейн, Ганс (Старший)</li>
@@ -735,7 +747,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1500 по 1599 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -768,7 +780,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1600 по 1699 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -801,7 +813,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1700 по 1799 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -834,7 +846,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1800 по 1899 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -867,7 +879,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1900 по 1999 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -900,7 +912,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 2000 г.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -940,13 +952,15 @@
             </div>
             <div class="catalog__artist-name">Доменико Гирландайо</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">2 июня 1448 — 11 января 1494</span><br>
-              Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
-              которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
-              Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в
-              которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских
-              персонажей (в
-              их роли выступают знатные граждане Флоренции в костюмах того времени).
+              <span class="catalog__artist-years">2 июня 1448 — 11 января 1494</span>
+              <p>
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
+                Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в
+                которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских
+                персонажей (в
+                их роли выступают знатные граждане Флоренции в костюмах того времени).
+              </p>
             </div>
 
           </div>
@@ -957,12 +971,14 @@
             </div>
             <div class="catalog__artist-name">Джованни Антонио Больтраффио</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">1467 — 1466</span><br>
-              Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях
-              Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его
-              первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491
-              году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным
-              художником Лодовико Моро и славился своими психологическими портретами.
+              <span class="catalog__artist-years">1467 — 1466</span>
+              <p>
+                Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях
+                Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его
+                первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491
+                году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным
+                художником Лодовико Моро и славился своими психологическими портретами.
+              </p>
             </div>
           </div>
           <div class="artist-info catalog__artist" id="perugino">
@@ -972,20 +988,22 @@
             </div>
             <div class="catalog__artist-name">Пьетро Перуджино</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">1497 — 1500</span><br>
-              Родился в местечке Читта-делла-Пьеве в 35 км от Перуджи. После обучения у местного живописца
-              в 1470 году приехал во Флоренцию и поступил в мастерскую Андреа Верроккьо.
-              В 1481 году, будучи уже известным мастером, в числе лучших художников Италии приглашён папой
-              Сикстом IV в Рим для участия в работах над декорированием Сикстинской капеллы.
-              Работал во многих городах Италии, но более всего в Перудже, где он был главой большой
-              мастерской. В 1480—1490-х годах Перуджино был одним из самых прославленных художников
-              Италии. Самый же знаменитый из его учеников — Рафаэль Санти.
-              Лучшими произведениями Перуджино считаются созданные до 1500 года. Выделяется фреска
-              «Вручение ключей апостолу Петру», которая отличается стройностью композиции. Одна из самых
-              известных картин — «Оплакивание Христа».
-              После смерти в 1520 году Рафаэля учитель завершил не законченные его великим учеником фрески
-              в церкви Перуджи.
-              Перуджино умер от чумы в Перудже в 1524 году.
+              <span class="catalog__artist-years">1497 — 1500</span>
+              <p>
+                Родился в местечке Читта-делла-Пьеве в 35 км от Перуджи. После обучения у местного живописца
+                в 1470 году приехал во Флоренцию и поступил в мастерскую Андреа Верроккьо.
+                В 1481 году, будучи уже известным мастером, в числе лучших художников Италии приглашён папой
+                Сикстом IV в Рим для участия в работах над декорированием Сикстинской капеллы.
+                Работал во многих городах Италии, но более всего в Перудже, где он был главой большой
+                мастерской. В 1480—1490-х годах Перуджино был одним из самых прославленных художников
+                Италии. Самый же знаменитый из его учеников — Рафаэль Санти.
+                Лучшими произведениями Перуджино считаются созданные до 1500 года. Выделяется фреска
+                «Вручение ключей апостолу Петру», которая отличается стройностью композиции. Одна из самых
+                известных картин — «Оплакивание Христа».
+                После смерти в 1520 году Рафаэля учитель завершил не законченные его великим учеником фрески
+                в церкви Перуджи.
+                Перуджино умер от чумы в Перудже в 1524 году.
+              </p>
             </div>
 
           </div>
@@ -994,7 +1012,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1400 по 1499 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1037,7 +1055,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header accordion-header-active">C 1500 по 1599 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1070,7 +1088,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1600 по 1699 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1103,7 +1121,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1700 по 1799 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1136,7 +1154,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1800 по 1899 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1169,7 +1187,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1900 по 1999 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1202,7 +1220,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 2000 г.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1242,18 +1260,20 @@
             </div>
             <div class="catalog__artist-name">Андре́й Рублёв</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">ок. 1360 — 17 октября 1428</span><br>
-              Творчество Рублёва сложилось на почве художественных традиций Московского княжества; он был
-              хорошо знаком также со славянским художественным опытом. Первое упоминание об Андрее в
-              летописи появилось только в 1405 году, свидетельствующее о том, что Феофаном Греком,
-              Прохором-старцем и чернецом (монахом) Андреем Рублёвым был расписан Благовещенский собор в
-              Московском кремле. В перечне имён в летописи он назван последним, то есть он был
-              младшим[10]. Второй раз в летописи Андрей упоминается в 1408 году, когда он делал росписи с
-              Даниилом Чёрным в Успенском соборе во Владимире. Прошло всего три года, а у Андрея уже
-              появились помощники и ученики, к тому времени у Андрея уже полностью сформировался свой
-              индивидуальный стиль. В 1420-х годах Андрей упоминается в третий раз: с Даниилом Чёрным он
-              руководил работами в Троицком соборе Троице-Сергиева монастыря. Эти росписи не сохранились.
-              В 1411 или 1425—1427 годах он создал свой шедевр — «Троицу».
+              <span class="catalog__artist-years">ок. 1360 — 17 октября 1428</span>
+              <p>
+                Творчество Рублёва сложилось на почве художественных традиций Московского княжества; он был
+                хорошо знаком также со славянским художественным опытом. Первое упоминание об Андрее в
+                летописи появилось только в 1405 году, свидетельствующее о том, что Феофаном Греком,
+                Прохором-старцем и чернецом (монахом) Андреем Рублёвым был расписан Благовещенский собор в
+                Московском кремле. В перечне имён в летописи он назван последним, то есть он был
+                младшим[10]. Второй раз в летописи Андрей упоминается в 1408 году, когда он делал росписи с
+                Даниилом Чёрным в Успенском соборе во Владимире. Прошло всего три года, а у Андрея уже
+                появились помощники и ученики, к тому времени у Андрея уже полностью сформировался свой
+                индивидуальный стиль. В 1420-х годах Андрей упоминается в третий раз: с Даниилом Чёрным он
+                руководил работами в Троицком соборе Троице-Сергиева монастыря. Эти росписи не сохранились.
+                В 1411 или 1425—1427 годах он создал свой шедевр — «Троицу».
+              </p>
             </div>
           </div>
         </div>
@@ -1261,7 +1281,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1400 по 1499 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Дионисий (иконописец)</li>
                 <li class="catalog__list-item">Прохор с Городца</li>
                 <li class="artist active catalog__list-item link" data-target="#rublev">
@@ -1273,7 +1293,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1500 по 1599 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1306,7 +1326,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1600 по 1699 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1339,7 +1359,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1700 по 1799 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1372,7 +1392,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1800 по 1899 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1405,7 +1425,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1900 по 1999 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1438,7 +1458,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 2000 г.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1478,15 +1498,16 @@
             </div>
             <div class="catalog__artist-name">Доменико Гирландайо</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">2 июня 1448 — 11 января 1494</span><br>
-              Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
-              которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
-              Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в
-              которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских
-              персонажей (в
-              их роли выступают знатные граждане Флоренции в костюмах того времени).
+              <span class="catalog__artist-years">2 июня 1448 — 11 января 1494</span>
+              <p>
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
+                Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в
+                которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских
+                персонажей (в
+                их роли выступают знатные граждане Флоренции в костюмах того времени).
+              </p>
             </div>
-
           </div>
           <div class="artist-info catalog__artist" id="bol">
             <div class="catalog__artist-pic">
@@ -1495,12 +1516,14 @@
             </div>
             <div class="catalog__artist-name">Джованни Антонио Больтраффио</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">1467 — 1466</span><br>
-              Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях
-              Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его
-              первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491
-              году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным
-              художником Лодовико Моро и славился своими психологическими портретами.
+              <span class="catalog__artist-years">1467 — 1466</span>
+              <p>
+                Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях
+                Фоппы, Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его
+                первое произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491
+                году совместно с Марко д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным
+                художником Лодовико Моро и славился своими психологическими портретами.
+              </p>
             </div>
           </div>
           <div class="artist-info catalog__artist" id="per">
@@ -1510,20 +1533,22 @@
             </div>
             <div class="catalog__artist-name">Пьетро Перуджино</div>
             <div class="catalog__artist-description">
-              <span class="catalog__artist-years">1497 — 1500</span><br>
-              Родился в местечке Читта-делла-Пьеве в 35 км от Перуджи. После обучения у местного живописца
-              в 1470 году приехал во Флоренцию и поступил в мастерскую Андреа Верроккьо.
-              В 1481 году, будучи уже известным мастером, в числе лучших художников Италии приглашён папой
-              Сикстом IV в Рим для участия в работах над декорированием Сикстинской капеллы.
-              Работал во многих городах Италии, но более всего в Перудже, где он был главой большой
-              мастерской. В 1480—1490-х годах Перуджино был одним из самых прославленных художников
-              Италии. Самый же знаменитый из его учеников — Рафаэль Санти.
-              Лучшими произведениями Перуджино считаются созданные до 1500 года. Выделяется фреска
-              «Вручение ключей апостолу Петру», которая отличается стройностью композиции. Одна из самых
-              известных картин — «Оплакивание Христа».
-              После смерти в 1520 году Рафаэля учитель завершил не законченные его великим учеником фрески
-              в церкви Перуджи.
-              Перуджино умер от чумы в Перудже в 1524 году.
+              <span class="catalog__artist-years">1497 — 1500</span>
+              <p>
+                Родился в местечке Читта-делла-Пьеве в 35 км от Перуджи. После обучения у местного живописца
+                в 1470 году приехал во Флоренцию и поступил в мастерскую Андреа Верроккьо.
+                В 1481 году, будучи уже известным мастером, в числе лучших художников Италии приглашён папой
+                Сикстом IV в Рим для участия в работах над декорированием Сикстинской капеллы.
+                Работал во многих городах Италии, но более всего в Перудже, где он был главой большой
+                мастерской. В 1480—1490-х годах Перуджино был одним из самых прославленных художников
+                Италии. Самый же знаменитый из его учеников — Рафаэль Санти.
+                Лучшими произведениями Перуджино считаются созданные до 1500 года. Выделяется фреска
+                «Вручение ключей апостолу Петру», которая отличается стройностью композиции. Одна из самых
+                известных картин — «Оплакивание Христа».
+                После смерти в 1520 году Рафаэля учитель завершил не законченные его великим учеником фрески
+                в церкви Перуджи.
+                Перуджино умер от чумы в Перудже в 1524 году.
+              </p>
             </div>
 
           </div>
@@ -1532,7 +1557,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1400 по 1499 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1571,7 +1596,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1500 по 1599 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1604,7 +1629,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1600 по 1699 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1637,7 +1662,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1700 по 1799 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1670,7 +1695,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1800 по 1899 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1703,7 +1728,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 1900 по 1999 гг.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1736,7 +1761,7 @@
           <div class="accordion">
             <div class="catalog__row accordion-item" tabindex="0">
               <h3 class="catalog__period accordion-header">C 2000 г.</h3>
-              <ul class="catalog__list">
+              <ul class="catalog__list list">
                 <li class="catalog__list-item">Бенедетто ди Биндо</li>
                 <li class="catalog__list-item">Бергоньоне, Амброджо</li>
                 <li class="catalog__list-item">Биссоло, Франческо</li>
@@ -1774,10 +1799,10 @@
     <div class="container events__container">
       <h2 class="section__title events__title">События</h2>
       <div class="swiper-container--mob">
-        <ul class="events__cards swiper-wrapper">
+        <ul class="events__cards swiper-wrapper list">
           <li class="events__card swiper-slide">
             <img class="events__card-img" src="./images/events/1.jpg" alt="Изображение">
-            <div class="events__card-place">Музей им. Щусева <br>с 20 марта по 30 апреля</div>
+            <div class="events__card-place">Музей им. Щусева <span>с 20 марта по 30 апреля</span></div>
             <div class="events__card-plate">
               <div>
                 <h3 class="events__card-title">Книжная гравюра в живом восприятии</h3>
@@ -1790,7 +1815,7 @@
           </li>
           <li class="events__card swiper-slide">
             <img class="events__card-img" src="./images/events/2.jpg" alt="Изображение">
-            <div class="events__card-place">ММОМА<br>24 марта 19:00</div>
+            <div class="events__card-place">ММОМА<span>24 марта 19:00</span></div>
             <div class="events__card-plate">
               <div>
                 <h3 class="events__card-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
@@ -1802,7 +1827,7 @@
           </li>
           <li class="events__card swiper-slide is-hidden--mobile">
             <img class="events__card-img" src="./images/events/3.jpg" alt="Изображение">
-            <div class="events__card-place">Еврейский музей<br>с 31 марта по 21 апреля</div>
+            <div class="events__card-place">Еврейский музей<span>с 31 марта по 21 апреля</span></div>
             <div class="events__card-plate">
               <div>
                 <h3 class="events__card-title">Выставка «Формация 2020»</h3>
@@ -1815,7 +1840,7 @@
           </li>
           <li class="events__card swiper-slide is-hidden">
             <img class="events__card-img" src="./images/events/4.jpg" alt="Изображение">
-            <div class="events__card-place">ММАМ<br>с 8 апреля по 20 мая</div>
+            <div class="events__card-place">ММАМ<span>с 8 апреля по 20 мая</span></div>
             <div class="events__card-plate">
               <div>
                 <h3 class="events__card-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
@@ -1828,7 +1853,7 @@
           </li>
           <li class="events__card swiper-slide is-hidden">
             <img class="events__card-img" src="./images/events/5.jpg" alt="Изображение">
-            <div class="events__card-place">Третьяковка на Крымском валу<br>с 30 марта по 30 апреля</div>
+            <div class="events__card-place">Третьяковка на Крымском валу<span>с 30 марта по 30 апреля</span></div>
             <div class="events__card-plate">
               <div>
                 <h3 class="events__card-title">XXIV Международная биеннале молодого искусства</h3>
@@ -1841,7 +1866,7 @@
           </li>
           <li class="events__card swiper-slide is-hidden">
             <img src="./images/events/5.jpg" class="events__card-img" alt="Изображение">
-            <div class="events__card-place">Музей им. Щусева <br>с 20 марта по 30 апреля</div>
+            <div class="events__card-place">Музей им. Щусева <span>с 20 марта по 30 апреля</span></div>
             <div class="events__card-plate">
               <div>
                 <h3 class="events__card-title">Книжная гравюра в живом восприятии</h3>
@@ -1926,7 +1951,7 @@
             <div class="swiper-slide image-slide">
               <img src="./images/editions/1.jpg" alt="Изображение обложки">
               <div class="editions__props">
-                <div class="editions__props-name"><b>Искусство цвета</b><br>Иттен, Иоханнес</div>
+                <div class="editions__props-name"><b>Искусство цвета</b>Иттен, Иоханнес</div>
                 <div class="editions__props-value"><i>620 руб</i></div>
               </div>
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
@@ -1934,7 +1959,7 @@
             <div class="swiper-slide image-slide">
               <img src="./images/editions/2.jpg" alt="Изображение обложки">
               <div class="editions__props">
-                <div class="editions__props-name"><b>Типографика</b><br>Рудер, Эмиль</div>
+                <div class="editions__props-name"><b>Типографика</b>Рудер, Эмиль</div>
                 <div class="editions__props-value"><i>2 450 руб</i></div>
               </div>
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
@@ -1942,7 +1967,7 @@
             <div class="swiper-slide image-slide">
               <img src="./images/editions/3.jpg" alt="Изображение обложки">
               <div class="editions__props">
-                <div class="editions__props-name"><b>Книга про буквы</b><br>Гордон, Юрий</div>
+                <div class="editions__props-name"><b>Книга про буквы</b>Гордон, Юрий</div>
                 <div class="editions__props-value"><i>2 200 руб</i></div>
               </div>
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
@@ -1950,7 +1975,7 @@
             <div class="swiper-slide image-slide">
               <img src="./images/editions/4.jpg" alt="Изображение обложки">
               <div class="editions__props">
-                <div class="editions__props-name"><b>Николай Ильин</b><br>Кричевский, Владимир</div>
+                <div class="editions__props-name"><b>Николай Ильин</b>Кричевский, Владимир</div>
                 <div class="editions__props-value"><i>1 100 руб</i></div>
               </div>
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
@@ -1958,7 +1983,7 @@
             <div class="swiper-slide image-slide">
               <img src="./images/editions/5.jpg" alt="Изображение обложки">
               <div class="editions__props">
-                <div class="editions__props-name"><b>Модульные сетки в граф...</b><br>Мюллер-Брокманн,
+                <div class="editions__props-name"><b>Модульные сетки в граф...</b>Мюллер-Брокманн,
                   Йозеф
                 </div>
                 <div class="editions__props-value"><i>1 450 руб</i></div>
@@ -1968,7 +1993,7 @@
             <div class="swiper-slide image-slide">
               <img src="./images/editions/6.jpg" alt="Изображение обложки">
               <div class="editions__props">
-                <div class="editions__props-name"><b>Эволюция графических ст...</b><br>Хеллер, Чваст
+                <div class="editions__props-name"><b>Эволюция графических ст...</b>Хеллер, Чваст
                 </div>
                 <div class="editions__props-value">3 200 руб</div>
               </div>
@@ -1977,7 +2002,7 @@
             <div class="swiper-slide image-slide">
               <img src="./images/editions/7.jpg" alt="Изображение обложки">
               <div class="editions__props">
-                <div class="editions__props-name"><b>Искусство и визуальное в...</b><br>Арнхейм, Рудольф
+                <div class="editions__props-name"><b>Искусство и визуальное в...</b>Арнхейм, Рудольф
                 </div>
                 <div class="editions__props-value">2 200 руб</div>
               </div>
@@ -2115,8 +2140,10 @@
 </main>
 <footer class="footer">
   <div class="container footer__container">
-    <a class="logo footer__logo link" href="#" aria-label="Логотип Бланчард"></a>
-    <ul class="footer__social">
+    <a class="logo footer__logo link" href="#" aria-label="Логотип Бланчард">
+      <img src="./images/logo.svg" alt="Логотип Бланчард">
+    </a>
+    <ul class="footer__social list">
       <li class="footer__social-item">
         <a class="footer__social-link footer__social-link--vk link" href="/"
            aria-label="Социальная сеть Vkontakte"></a>

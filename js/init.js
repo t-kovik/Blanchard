@@ -10,7 +10,7 @@ const toggleBurger = () => {
   function toggleBtns(firstBtn, secondBtn, overflow) {
     firstBtn.hide();
     secondBtn.show();
-    $('.header__nav').toggle();
+    $('.header__menu').toggle();
     $('body').css('overflow-y', overflow);
     $('html').css('overflow-y', overflow);
   }
@@ -62,6 +62,10 @@ const toggleDropdown = () => {
   })
 }
 //
+
+$('.dropdown').each(function(index,el) {
+  new SimpleBar(el, {scrollbarMaxSize: 28})
+});
 
 //Перенос поиска в верхнюю часть header
 if ($('.header-bottom').css('visibility', 'hidden')) {

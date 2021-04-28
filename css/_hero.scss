@@ -1,6 +1,7 @@
 @import "_colors";
 
 .hero {
+  position: relative;
   color: $white;
   font-weight: 700;
 
@@ -25,9 +26,9 @@
   }
 
   &__plate {
-    padding: 103px 0 113px 0;
+    padding: 41px 0 113px 0;
     @media (min-width: 1200px) {
-      padding: 133px 0 122px 0;
+      padding: 68px 0 122px 0;
       max-width: 600px;
     }
 
@@ -37,22 +38,23 @@
     }
 
     @media (max-width: 475px) {
-      padding: 30px 15px 37px 15px;
+      padding: 30px 15px 43px 15px;
     }
 
   }
 
   &__title {
-    margin-top: 4px;
+    margin-bottom: 15px;
     font-size: 72px;
     line-height: 86px;
 
     @media (max-width: 1200px) {
+      margin-bottom: 6px;
       max-width: 600px;
-      margin-top: 8px;
     }
 
     @media all and (max-width: 576px) {
+      margin-bottom: 3px;
       max-width: 100%;
       font-size: 52px;
       line-height: 62px;
@@ -65,21 +67,20 @@
   }
 
   &__subtitle {
-    margin-top: 20px;
+    margin-bottom: 93px;
     font-size: 18px;
     line-height: 30px;
     @media (max-width: 1200px) {
+      margin-bottom: 133px;
       max-width: 665px;
-      margin-top: 8px;
     }
 
     @media all and (max-width: 576px) {
-      margin-top: 16px;
+      margin-bottom: 40px;
       max-width: 100%;
     }
 
     @media (max-width: 475px) {
-      margin-top: 0;
       font-size: 12px;
       line-height: 16px;
     }
@@ -88,7 +89,6 @@
   &__btn {
     position: relative;
     display: inline-block;
-    margin-top: 89px;
     padding: 23px 33px;
     border-radius: 100px;
     border: 3px solid transparent;
@@ -101,15 +101,14 @@
     @media all and (min-width: 1024px) {
       &:hover {
         border: 3px solid $purpleD1;
+        transition: border 0.3s ease-in-out;
       }
     }
 
     @media all and (max-width: 1200px) {
-      margin-top: 134px;
     }
 
     @media all and (max-width: 576px) {
-      margin-top: 41px;
     }
 
     @media (max-width: 475px) {
@@ -123,7 +122,6 @@
       background: $purple79;
     }
   }
-
 }
 
 @keyframes autoplay {
@@ -151,13 +149,19 @@
 }
 
 .swiper-container {
-  margin-top: -70px;
-}
-
-.swiper-wrapper--hero {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: -70px;
+
+  @media (max-width: 1200px) {
+    margin-top: 0;
+  }
+}
+
+.swiper-wrapper--hero {
 
   .swiper-slide {
     width: 100%;

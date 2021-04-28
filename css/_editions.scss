@@ -1,7 +1,7 @@
 @import "colors";
 
 .editions {
-  padding: 80px 80px 64px 80px;
+  padding: 80px 80px 67px 80px;
   color: $white;
   background: url("../img/editions/back.jpg") center no-repeat;
   background-size: cover;
@@ -119,7 +119,7 @@
     position: relative;
     top: 2px;
     margin-right: 4px;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     @media (min-width: 1024px) {
       &:hover {
@@ -127,6 +127,7 @@
 
         &::before {
           border-color: $light-purple;
+          transition: border-color 0.3s ease-in-out;
         }
       }
     }
@@ -140,6 +141,7 @@
 
       &::before {
         border-color: $purple79;
+        transition: border-color 0.3s ease-in-out;
       }
     }
 
@@ -240,9 +242,11 @@
   &__props {
     display: flex;
     justify-content: space-between;
-    margin-top: 18px;
+    margin-top: 15px;
 
     &-name {
+      display: flex;
+      flex-direction: column;
       line-height: 22px;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -282,7 +286,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     outline: 0;
 
     @media (max-width: 576px) {

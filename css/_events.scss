@@ -53,7 +53,10 @@
     }
 
     &-place {
+      display: flex;
+      flex-direction: column;
       margin-right: 17px;
+      margin-top: 5px;
       font-weight: 600;
       font-size: 12px;
       line-height: 18px;
@@ -118,7 +121,7 @@
 
     &-wrapper {
       margin-bottom: -4px;
-      margin-top: 50px;
+      margin-top: 45px;
       text-align: center;
 
       @media (max-width: 1024px) {

@@ -58,8 +58,8 @@
     }
   }
 
-  &__nav {
-    display: block;
+  &__menu {
+    display: flex;
     @media (max-width: 1200px) {
       position: fixed;
       top: 100px;
@@ -119,9 +119,10 @@
   }
 
   &__btn {
-    transition: color 0.3s ease-in-out,
-                fill 0.3s ease-in-out;
-    margin-left: 11.6vw;
+    margin-left: 14.6vw;
+    font-size: 18px;
+    line-height: 25px;
+    transition: color 0.3s ease-in-out;
 
     @media (max-width: 1440px) {
       margin-left: 0;
@@ -150,6 +151,7 @@
 
         path {
           fill: $light-purple;
+          transition: fill 0.3s ease-in-out;
         }
       }
     }
@@ -164,6 +166,7 @@
 
       path {
         fill: $purple;
+        transition: fill 0.3s ease-in-out;
       }
     }
   }
@@ -181,7 +184,7 @@
     z-index: 10;
     background: rgba(0, 0, 0, 0.4);
     @media (max-width: 1200px) {
-      visibility: hidden;
+      display: none;
     }
   }
 
@@ -201,8 +204,7 @@
 
     &-btn {
       border: 2px solid transparent;
-      transition: color 0.3s ease-in-out,
-                  stroke 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
 
       @media all and (min-width: 1024px) {
         &:hover {
@@ -210,6 +212,7 @@
 
           & path {
             stroke: $purple;
+            transition: stroke 0.3s ease-in-out;;
           }
         }
       }
@@ -285,10 +288,11 @@
       min-width: 220px;
       border-width: 2px 2px 1px 2px;
       border-color: transparent transparent $white transparent;
+      font-size: 18px;
+      line-height: 25px;
       color: $white015;
       caret-color: $light-purple;
       background: transparent;
-      transition: all 0.3s ease-in-out;
 
       @media (max-width: 1200px) {
         display: none;
@@ -314,6 +318,7 @@
 
         rect, path {
           fill: $light-purple;
+          transition: fill 0.3s ease-in-out;
         }
       }
 
@@ -442,11 +447,19 @@ $dropdowns: 'realism', 'impressionism', 'post', 'avant-garde', 'futurism';
   margin-right: 19px;
   margin-top: 40px;
   margin-bottom: 40px;
-  width: 5px;
+  width: 2px;
+  background-color: $black;
 }
 
-.simplebar-scrollbar:before {
+.simplebar-scrollbar {
+  //max-height: 28px;
+}
+
+.simplebar-scrollbar::before {
+  top:0;
+  left:0;
   background: $white;
   opacity: 1;
+  width: 2px;
 }
 
