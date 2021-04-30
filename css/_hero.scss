@@ -22,7 +22,7 @@
 
   &__container {
     position: relative;
-    z-index: 10;
+    z-index: 1;
   }
 
   &__plate {
@@ -97,11 +97,11 @@
     line-height: 18px;
     background: $purple;
     outline: 0;
+    transition: border 0.3s ease-in-out;
 
     @media all and (min-width: 1024px) {
       &:hover {
         border: 3px solid $purpleD1;
-        transition: border 0.3s ease-in-out;
       }
     }
 

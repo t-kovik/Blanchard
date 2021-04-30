@@ -62,6 +62,7 @@
     margin-bottom: 5px;
     border-radius: 100%;
     background-size: 80%;
+    transition: filter 0.3s ease-in-out;
 
 
     &:focus {
@@ -128,7 +129,6 @@
     @media (min-width: 1024px) {
       &:hover {
         filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
-        transition: filter 0.3s ease-in-out;
       }
     }
 
@@ -218,6 +218,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
+    transition: border 0.3s ease-in-out;
 
     @media (max-width: 576px) {
       padding: 20px 20px 20.5px 0;
@@ -229,11 +230,10 @@
       &:hover {
         border: solid $purple;
         border-width: 1px 0 1px 0;
-        transition: border 0.3s ease-in-out;
+
 
         .ui-accordion-header-icon {
           background: url(".././img/catalog/arrow-white.svg") center no-repeat $purple;
-          transition: background-color 0.3s ease-in-out;
         }
       }
     }
@@ -289,6 +289,9 @@
 
     &-link {
       color: $color-main;
+      transition: color 0.3s ease-in-out,
+      font-weight 0.3s ease-in-out,
+      border 0.3s ease-in-out;
 
       @media (min-width: 1024px) {
         border-bottom: 1px solid transparent;
@@ -296,9 +299,6 @@
           border-bottom-color: $purple;
           font-weight: 600;
           color: $purple;
-          transition: color 0.3s ease-in-out,
-          font-weight 0.3s ease-in-out,
-          border 0.3s ease-in-out;
         }
       }
 
@@ -386,6 +386,7 @@
   height: 50px;
   border-radius: 100%;
   background: url(".././img/catalog/arrow.svg") center no-repeat $whiteEC;
+  transition: background-color 0.3s ease-in-out;
 
   @media (max-width: 576px) {
     width: 30px;

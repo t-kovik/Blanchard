@@ -79,6 +79,7 @@
 
     &-img {
       filter: grayscale(100%) contrast(0);
+      transition: filter 0.3s ease-in-out;
       @media (max-width: 576px)  {
         width: 54%;
       }
@@ -86,7 +87,6 @@
       &:hover {
         @media (min-width: 1024px)  {
           filter: grayscale(0);
-          transition: filter 0.3s ease-in-out;
         }
       }
     }
@@ -163,10 +163,13 @@
     background: url("../img/projects/arrow.svg") center no-repeat $whiteEC;
 
     @media (min-width: 1024px) {
-      &:not(.swiper-button-disabled):hover {
-        background-color: $purple;
+      &:not(.swiper-button-disabled) {
         transition: background-color 0.3s ease-in-out;
+        :hover {
+          background-color: $purple;
+        }
       }
+
     }
 
     &:active {

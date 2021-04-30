@@ -121,13 +121,16 @@
     margin-right: 4px;
     transition: color 0.3s ease-in-out;
 
+    &::before {
+      transition: border-color 0.3s ease-in-out;
+    }
+
     @media (min-width: 1024px) {
       &:hover {
         color: $light-purple;
 
         &::before {
           border-color: $light-purple;
-          transition: border-color 0.3s ease-in-out;
         }
       }
     }
@@ -141,7 +144,6 @@
 
       &::before {
         border-color: $purple79;
-        transition: border-color 0.3s ease-in-out;
       }
     }
 

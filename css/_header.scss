@@ -145,13 +145,16 @@
       margin-top: 17px;
     }
 
+    path {
+      transition: fill 0.3s ease-in-out;
+    }
+
     @media all and (min-width: 1024px) {
       &:hover {
         color: $light-purple;
 
         path {
           fill: $light-purple;
-          transition: fill 0.3s ease-in-out;
         }
       }
     }
@@ -166,7 +169,6 @@
 
       path {
         fill: $purple;
-        transition: fill 0.3s ease-in-out;
       }
     }
   }
@@ -206,13 +208,16 @@
       border: 2px solid transparent;
       transition: color 0.3s ease-in-out;
 
+      path {
+        transition: stroke 0.3s ease-in-out;
+      }
+
       @media all and (min-width: 1024px) {
         &:hover {
           color: $purple;
 
           & path {
             stroke: $purple;
-            transition: stroke 0.3s ease-in-out;;
           }
         }
       }
@@ -408,6 +413,7 @@
   min-width: 300px;
   background: rgba(0, 0, 0, 0.6);
   overflow-y: auto;
+  z-index: 10;
 }
 
 .dropdown__item {

@@ -38,9 +38,16 @@ h1, h2, h3, h4, p {
 }
 
 .main__title {
-  width: 0;
-  height: 0;
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .d-flex {
@@ -123,12 +130,12 @@ h1, h2, h3, h4, p {
 .btn--no-fill {
   position: relative;
   outline: 0;
+  transition: background-color 0.3s ease-in-out,
+  color 0.3s ease-in-out;
   @media (min-width: 1024px) {
     &:hover {
       background-color: $purple;
       color: $white;
-      transition: background-color 0.3s ease-in-out,
-                  color 0.3s ease-in-out;
     }
   }
 
