@@ -63,10 +63,14 @@
     border-radius: 100%;
     background-size: 80%;
     transition: filter 0.3s ease-in-out;
+    outline: 0;
 
 
     &:focus {
-      outline: 1px solid $purple;
+      width: 66px;
+      height: 66px;
+      border: 1px solid $purple;
+      border-radius: 100%;
     }
 
     @media (max-width: 475px) {

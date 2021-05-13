@@ -171,16 +171,24 @@ const switchSearch = () => {
 
 //Функция открытия дропдауна из нижнего header
 const toggleDropdown = () => {
-  let isOpenMenu = false;
+  const item = $('.header__list-item');
 
-  $('.header__list-item').click(function () {
-    if (isOpenMenu) {
-      $(this).find('ul').css('display', 'none');
-      isOpenMenu = false;
+
+  item.click(function () {
+    const dropdown = $(this).find('ul');
+    $('.dropdown').removeClass('is-active');
+
+    if(dropdown.hasClass('is-active')) {
+      dropdown.removeClass('is-active');
     } else {
-      isOpenMenu = true;
-      $(this).find('ul').css('display', 'block');
+      dropdown.addClass('is-active');
     }
+
+    $(document).click(function (ev) {
+      if(!item.is(ev.target) && item.has(ev.target).length === 0) {
+        $('.dropdown').removeClass('is-active');
+      }
+    })
   })
 }
 //
@@ -252,6 +260,8 @@ $('.accordion').accordion({
   heightStyle: 'content',
   header: '> .accordion-item > .accordion-header',
 });
+
+$( '.accordion__main' ).accordion( "option", "active", 0 );
 //
 
 //Функция переключения табов

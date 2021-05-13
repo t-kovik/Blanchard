@@ -142,9 +142,9 @@ h1, h2, h3, h4, p {
   @media (min-width: 1024px) {
     .btn-nav--gray:not(.swiper-button-disabled):hover {
       background-color: #9D5CD0; } }
-  .btn-nav--gray:focus {
+  .btn-nav--gray:not(.swiper-button-disabled):focus {
     outline: 2px solid #7943A4; }
-  .btn-nav--gray:active {
+  .btn-nav--gray:not(.swiper-button-disabled):active {
     background-color: #7943A4;
     border: 2px solid #D1A9F0; }
 
@@ -517,6 +517,9 @@ h1, h2, h3, h4, p {
   opacity: 1;
   width: 2px; }
 
+.dropdown.is-active {
+  display: block; }
+
 .hero {
   position: relative;
   color: #fff;
@@ -584,7 +587,6 @@ h1, h2, h3, h4, p {
     border-radius: 100px;
     border: 3px solid transparent;
     font-weight: 700;
-    font-size: 18px;
     line-height: 18px;
     background: #9D5CD0;
     outline: 0;
@@ -954,9 +956,13 @@ h1, h2, h3, h4, p {
   margin-bottom: 5px;
   border-radius: 100%;
   background-size: 80%;
-  transition: filter 0.3s ease-in-out; }
+  transition: filter 0.3s ease-in-out;
+  outline: 0; }
   .catalog__country:focus {
-    outline: 1px solid #9D5CD0; }
+    width: 66px;
+    height: 66px;
+    border: 1px solid #9D5CD0;
+    border-radius: 100%; }
   @media (max-width: 475px) {
     .catalog__country {
       width: 32px;
@@ -1684,12 +1690,12 @@ input[type='checkbox'] {
     @media (min-width: 1024px) {
       .swiper-partners .btn-nav:not(.swiper-button-disabled) {
         transition: background-color 0.3s ease-in-out; }
-        .swiper-partners .btn-nav:not(.swiper-button-disabled) :hover {
+        .swiper-partners .btn-nav:not(.swiper-button-disabled):hover {
           background-color: #9D5CD0; } }
-    .swiper-partners .btn-nav:active {
+    .swiper-partners .btn-nav:not(.swiper-button-disabled):active {
       background: #7943A4;
       border: 3px solid #D1A9F0; }
-    .swiper-partners .btn-nav:focus {
+    .swiper-partners .btn-nav:not(.swiper-button-disabled):focus {
       outline: 2px solid #7943A4; }
     @media (max-width: 576px) {
       .swiper-partners .btn-nav {

@@ -457,15 +457,15 @@ $dropdowns: 'realism', 'impressionism', 'post', 'avant-garde', 'futurism';
   background-color: $black;
 }
 
-.simplebar-scrollbar {
-  //max-height: 28px;
-}
-
 .simplebar-scrollbar::before {
   top:0;
   left:0;
   background: $white;
   opacity: 1;
   width: 2px;
+}
+
+.dropdown.is-active {
+  display: block;
 }
 

@@ -187,11 +187,11 @@ h1, h2, h3, h4, p {
     }
   }
 
-  &:focus {
+  &:not(.swiper-button-disabled):focus {
     outline: 2px solid $purple79;
   }
 
-  &:active {
+  &:not(.swiper-button-disabled):active {
     background-color: $purple79;
     border: 2px solid $purpleD1;
   }
