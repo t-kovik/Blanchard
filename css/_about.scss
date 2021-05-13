@@ -1,0 +1,23 @@
+.about {
+  margin-bottom: 70px;
+
+  @media (max-width: 576px) {
+    margin-bottom: 41px;
+  }
+
+  &__title {
+    @media (max-width: 576px) {
+      margin-bottom: 12px;
+    }
+  }
+  &__text {
+    max-width: 1080px;
+    font-size: 16px;
+    line-height: 32px;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+}
