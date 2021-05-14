@@ -50,6 +50,14 @@
     }
   }
 
+  &__form-label {
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 7px;
+    }
+  }
+
   &__note {
     max-width: 90%;
     font-weight: 600;
@@ -83,7 +91,6 @@
     @media (max-width: 768px) {
       display: block;
       max-width: 100%;
-      margin-top: 30px;
     }
   }
 
@@ -119,6 +126,10 @@
 
   @media (max-width: 1200px) {
     max-height: 594px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
   }
 
   @media (max-width: 576px) {
@@ -193,13 +204,10 @@
   }
 
   &__years {
+    margin-bottom: 40px;
     font-size: 12px;
     line-height: 16px;
     color: $gray96;
-  }
-
-  &__text {
-    margin-top: 40px;
   }
 
   &__description {
@@ -302,15 +310,10 @@
 }
 
 .choices {
-  margin-top: 10px;
   height: 120px;
 
   &:focus {
     outline: 2px solid $purple;
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 7px;
   }
 
   &__inner, &__list {

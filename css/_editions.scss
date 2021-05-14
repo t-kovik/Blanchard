@@ -28,6 +28,8 @@
     }
   }
 
+
+
   &__subtitle {
     font-size: 16px;
     line-height: 32px;
@@ -97,6 +99,7 @@
   &__category {
     display: flex;
     flex-direction: column;
+    margin-bottom: 32px;
   }
 
   &__list {
@@ -198,10 +201,12 @@
   }
 
   &__prices {
-    margin-top: 26px;
+    &-subtitle {
+      margin-bottom: 4px;
 
-    @media (max-width: 576px) {
-      margin-top: 19px;
+      @media (max-width: 576px) {
+        margin-bottom: 19px;
+      }
     }
 
     &-label {
@@ -210,17 +215,12 @@
   }
 
   &__plate {
-    margin-top: 8px;
     min-width: 278px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 6px;
     
     @media (max-width: 768px) {
       max-width: 277px;
-    }
-
-    @media (max-width: 576px) {
-      margin-top: 5px;
     }
   }
 
@@ -241,10 +241,18 @@
     color: $white;
   }
 
+  &__img {
+    margin-bottom: 15px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 21px;
+    }
+  }
+
   &__props {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-bottom: 12px;
 
     &-name {
       display: flex;
@@ -259,15 +267,10 @@
       }
     }
 
-    @media (max-width: 1200px) {
-      margin-top: 6px;
-    }
-
     @media (max-width: 576px) {
       flex-direction: column;
       font-size: 12px;
       line-height: 16px;
-      margin-top: 0;
     }
 
     &-value {
@@ -282,7 +285,6 @@
   &__btn {
     position: relative;
     padding: 8px 20px;
-    margin-top: 12px;
     border: 2px solid $purple;
     border-radius: 100px;
     font-weight: 700;

@@ -391,7 +391,7 @@ toggleDropdown();
 initChoices();
 modalCall();
 tabsSwitch('.artist', '.artist-info');
-tabsSwitch('.catalog__country', '.country-artists');
+tabsSwitch('.catalog__country-btn', '.country-artists');
 showEvents();
 chooseCategory();
 validateForm();

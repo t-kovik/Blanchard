@@ -206,8 +206,8 @@
       <div class="gallery__column">
         <div>
           <h2 class="section__title gallery__title">Галерея</h2>
-          <form>
-            <label>Фильтровать по:
+          <form class="gallery__form">
+            <label class="gallery__form-label">Фильтровать по:
               <select class="gallery__select" size="3" tabindex="0" aria-label="Выбор фильтра">
                 <option class="gallery__option" value="author" tabindex="0">Автор</option>
                 <option class="gallery__option" value="trend" tabindex="0">Направление</option>
@@ -347,11 +347,21 @@
       <div class="catalog__wrapper">
         <h2 class="section__title catalog__title">Каталог</h2>
         <ul class="catalog__countries list">
-          <li class="catalog__country catalog__country--fr" data-target="#fr" tabindex="0"></li>
-          <li class="catalog__country catalog__country--de" data-target="#de" tabindex="0"></li>
-          <li class="catalog__country catalog__country--it active" data-target="#it" tabindex="0"></li>
-          <li class="catalog__country catalog__country--ru" data-target="#ru" tabindex="0"></li>
-          <li class="catalog__country catalog__country--bel" data-target="#bel" tabindex="0"></li>
+          <li class="catalog__country">
+            <button class="btn catalog__country-btn catalog__country-btn--fr" data-target="#fr" aria-label="Художники Франции"></button>
+          </li>
+          <li class="catalog__country">
+            <button class="btn catalog__country-btn catalog__country-btn--de" data-target="#de"  aria-label="Художники Германии"></button>
+          </li>
+          <li class="catalog__country">
+            <button class="btn catalog__country-btn catalog__country-btn--it active" data-target="#it"  aria-label="Художники Италии"></button>
+          </li>
+          <li class="catalog__country">
+            <button class="btn catalog__country-btn catalog__country-btn--ru" data-target="#ru"  aria-label="Художники России"></button>
+          </li>
+          <li class="catalog__country">
+            <button class="btn catalog__country-btn catalog__country-btn--bel" data-target="#bel"  aria-label="Художники Бельгии"></button>
+          </li>
         </ul>
       </div>
       <p class="catalog__text">Акционеры крупнейших компаний, которые представляют собой яркий пример
@@ -1927,7 +1937,7 @@
           </div>
         </div>
         <div class="editions__prices">
-          <h3 class="editions__subtitle">Цена</h3>
+          <h3 class="editions__subtitle editions__prices-subtitle">Цена</h3>
           <div class="editions__plate">
             <label class="editions__prices-label">От
               <input class="editions__input" type="number" placeholder="50">
@@ -1949,7 +1959,7 @@
           </div>
           <div class="swiper-wrapper swiper-wrapper--editions">
             <div class="swiper-slide image-slide">
-              <img src="./images/editions/1.jpg" alt="Изображение обложки">
+              <img class="editions__img" src="./images/editions/1.jpg" alt="Изображение обложки">
               <div class="editions__props">
                 <div class="editions__props-name"><b>Искусство цвета</b>Иттен, Иоханнес</div>
                 <div class="editions__props-value"><i>620 руб</i></div>
@@ -1957,7 +1967,7 @@
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
             </div>
             <div class="swiper-slide image-slide">
-              <img src="./images/editions/2.jpg" alt="Изображение обложки">
+              <img class="editions__img" src="./images/editions/2.jpg" alt="Изображение обложки">
               <div class="editions__props">
                 <div class="editions__props-name"><b>Типографика</b>Рудер, Эмиль</div>
                 <div class="editions__props-value"><i>2 450 руб</i></div>
@@ -1965,7 +1975,7 @@
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
             </div>
             <div class="swiper-slide image-slide">
-              <img src="./images/editions/3.jpg" alt="Изображение обложки">
+              <img class="editions__img" src="./images/editions/3.jpg" alt="Изображение обложки">
               <div class="editions__props">
                 <div class="editions__props-name"><b>Книга про буквы</b>Гордон, Юрий</div>
                 <div class="editions__props-value"><i>2 200 руб</i></div>
@@ -1973,7 +1983,7 @@
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
             </div>
             <div class="swiper-slide image-slide">
-              <img src="./images/editions/4.jpg" alt="Изображение обложки">
+              <img class="editions__img" src="./images/editions/4.jpg" alt="Изображение обложки">
               <div class="editions__props">
                 <div class="editions__props-name"><b>Николай Ильин</b>Кричевский, Владимир</div>
                 <div class="editions__props-value"><i>1 100 руб</i></div>
@@ -1981,7 +1991,7 @@
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
             </div>
             <div class="swiper-slide image-slide">
-              <img src="./images/editions/5.jpg" alt="Изображение обложки">
+              <img class="editions__img" src="./images/editions/5.jpg" alt="Изображение обложки">
               <div class="editions__props">
                 <div class="editions__props-name"><b>Модульные сетки в граф...</b>Мюллер-Брокманн,
                   Йозеф
@@ -1991,7 +2001,7 @@
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
             </div>
             <div class="swiper-slide image-slide">
-              <img src="./images/editions/6.jpg" alt="Изображение обложки">
+              <img class="editions__img" src="./images/editions/6.jpg" alt="Изображение обложки">
               <div class="editions__props">
                 <div class="editions__props-name"><b>Эволюция графических ст...</b>Хеллер, Чваст
                 </div>
@@ -2000,7 +2010,7 @@
               <button class="btn editions__btn btn--no-fill btn--focus" aria-label="Заказать">Заказать</button>
             </div>
             <div class="swiper-slide image-slide">
-              <img src="./images/editions/7.jpg" alt="Изображение обложки">
+              <img class="editions__img" src="./images/editions/7.jpg" alt="Изображение обложки">
               <div class="editions__props">
                 <div class="editions__props-name"><b>Искусство и визуальное в...</b>Арнхейм, Рудольф
                 </div>

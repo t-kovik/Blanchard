@@ -24,15 +24,14 @@
   &__logo {
     display: block;
     @media (max-width: 576px) {
-      margin-top: 12px;
       order: 2;
     }
-
   }
 
   &__social {
     display: flex;
     @media (max-width: 576px) {
+      margin-bottom: 12px;
       order: 1;
     }
 
