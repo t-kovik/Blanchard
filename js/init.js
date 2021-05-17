@@ -212,7 +212,6 @@ const initChoices = () => {
     shouldSort: false,
   });
 
-  choices.showDropdown();
 
   let ariaLabel = select.getAttribute('aria-label');
   select.closest('.choices').setAttribute('aria-label', ariaLabel)
@@ -272,6 +271,11 @@ const tabsSwitch = (tab, tabContent) => {
     let activeTabContent = $(this).attr("data-target");
     $(tabContent).removeClass("visible");
     $(activeTabContent).toggleClass("visible");
+    if($(window).width() < 577) {
+      $('html, body').animate({
+        scrollTop: $(".catalog__artist.visible").offset().top  // класс объекта к которому приезжаем
+      }, 1000);
+    }
   });
 }
 //
