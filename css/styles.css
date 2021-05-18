@@ -1184,18 +1184,18 @@ h1, h2, h3, h4, p {
 .events__cards {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(3, minmax(290px, 1fr));
   grid-column-gap: 3.125em;
   grid-row-gap: 3.125em;
   margin-bottom: 45px; }
   @media (max-width: 1024px) {
     .events__cards {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       grid-column-gap: 2em;
       margin-bottom: 27px; } }
   @media (max-width: 768px) {
     .events__cards {
       grid-template-rows: 1fr;
-      grid-template-columns: 1fr 1fr;
       grid-column-gap: 1em;
       grid-row-gap: 1em;
       margin-bottom: 21px; } }
@@ -1286,7 +1286,7 @@ h1, h2, h3, h4, p {
   .is-hidden--mobile {
     display: block; } }
 
-.swiper-container--mob {
+.swiper-events {
   position: relative; }
 
 .swiper-pagination-bullet {
@@ -1362,10 +1362,11 @@ h1, h2, h3, h4, p {
   .editions__category {
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px; }
+    margin-bottom: 30px; }
   .editions__list {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: flex-start; }
     @media (max-width: 768px) {
       .editions__list {
         display: grid;
@@ -1419,6 +1420,8 @@ h1, h2, h3, h4, p {
         top: 16px; } }
   input[type='checkbox']:checked + .editions__label::after {
     opacity: 1; }
+  .editions input[type='checkbox']:focus + label {
+    outline: 2px solid #7943A4; }
   input[type='checkbox']:checked + .editions__label::before {
     border-color: #C283F3; }
   .editions input[type='checkbox']:checked + label {
@@ -1429,7 +1432,7 @@ h1, h2, h3, h4, p {
       .editions__title {
         margin-bottom: 16px; } }
   .editions__prices-subtitle {
-    margin-bottom: 4px; }
+    margin-bottom: 6px; }
     @media (max-width: 576px) {
       .editions__prices-subtitle {
         margin-bottom: 19px; } }
@@ -1446,7 +1449,7 @@ h1, h2, h3, h4, p {
     margin-left: 8px;
     padding-left: 10px;
     max-width: 73px;
-    height: 40px;
+    height: 38px;
     background: rgba(157, 92, 208, 0.5);
     border: 0; }
   .editions__input,
@@ -1499,6 +1502,20 @@ h1, h2, h3, h4, p {
         font-size: 12px;
         line-height: 16px;
         width: 100%; } }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+  input[type="number"]:focus {
+    outline: 1px solid #fff; }
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input; }
 
 @media (max-width: 576px) {
   .js-hidden {
