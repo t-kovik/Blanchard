@@ -1594,12 +1594,16 @@ input[type='checkbox'] {
       font-size: 18px;
       line-height: 32px;
       margin-bottom: 10px; } }
+.projects__partners-list {
+  overflow: hidden; }
 .projects__partners-item {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 150px;
   border: 1px solid #CACACA; }
+  .projects__partners-item:hover .projects__partners-img {
+    filter: grayscale(0); }
   @media (max-width: 1200px) {
     .projects__partners-item {
       min-height: 128px; } }
@@ -1625,49 +1629,45 @@ input[type='checkbox'] {
   @media (max-width: 576px) {
     .projects__partners-img {
       width: 54%; } }
-  @media (min-width: 1024px) {
-    .projects__partners-img:hover {
-      filter: grayscale(0); } }
 
 .tooltip {
   position: relative;
-  top: 2px;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  text-align: center;
-  background: url("../img/projects/tooltip.svg") center no-repeat;
-  cursor: pointer; }
-
-.tooltip .tooltip-text {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  z-index: 1;
-  margin-bottom: 13px;
-  margin-left: -132px;
-  padding: 8px 11px;
-  width: 264px;
-  visibility: hidden;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  color: #fff;
-  background: #CACACA; }
-
-.tooltip:hover .tooltip-text {
-  visibility: visible; }
-
-.tooltip .tooltip-text::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #CACACA transparent transparent transparent; }
+  width: 100%;
+  height: 100%; }
+  .tooltip:focus {
+    outline: 2px solid #9D5CD0; }
+  .tooltip::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    width: 264px;
+    background: #CACACA;
+    padding: 8px 11px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%); }
+  .tooltip::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #CACACA transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%); }
+  .tooltip:hover::after, .tooltip:hover::before, .tooltip:focus::after, .tooltip:focus::before {
+    opacity: 1;
+    visibility: visible; }
 
 .swiper-partners {
   position: relative;
