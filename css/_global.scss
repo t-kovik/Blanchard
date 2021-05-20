@@ -202,3 +202,17 @@ h1, h2, h3, h4, p {
   min-width: 75px;
   color: $white;
 }
+
+.social-link {
+  transition: opacity 0.3s ease-in-out;
+  @media (min-width: 1024px) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    border: 2px solid $purple79;
+    border-radius: 100%;
+  }
+}

@@ -273,7 +273,7 @@ const tabsSwitch = (tab, tabContent) => {
     $(activeTabContent).toggleClass("visible");
     if($(window).width() < 577) {
       $('html, body').animate({
-        scrollTop: $(".catalog__artist.visible").offset().top  // класс объекта к которому приезжаем
+        scrollTop: $(".catalog__artist.visible").offset().top
       }, 1000);
     }
   });

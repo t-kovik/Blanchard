@@ -38,7 +38,7 @@
 
     @media (max-width: 475px) {
       justify-content: center;
-      margin-bottom: -5px;
+      //margin-bottom: -5px;
     }
   }
 
@@ -73,9 +73,12 @@
       & {
         &-btn--#{$country-name} {
           background: url("../img/catalog/#{$country-name}.png") center no-repeat;
+
+          @media (max-width: 475px) {
+            background-size: 32px 32px;
+          }
         }
       }
-
     }
 
     @for $i from 1 through 5 {
