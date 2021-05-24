@@ -37,6 +37,16 @@ h1, h2, h3, h4, p {
   margin: 0;
 }
 
+.js-focus-visible :focus:not(.focus-visible),
+[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.js-focus-visible :focus:not(.focus-visible)::before {
+  outline: none;
+  border:0;
+}
+
 .main__title {
   position: absolute;
   width: 1px;
@@ -177,6 +187,7 @@ h1, h2, h3, h4, p {
 
 .swiper-button-disabled {
   cursor: initial;
+  opacity: 0.6;
 }
 
 .btn-nav--gray {

@@ -1,7 +1,6 @@
-
 const burger = $('.header__btn-burger');
 
-function swiperCall () {
+function swiperCall() {
   const swiper = new Swiper('.swiper-container', {
     speed: 2500,
     autoplay: {
@@ -171,29 +170,35 @@ const switchSearch = () => {
 
 //Функция открытия дропдауна из нижнего header
 const toggleDropdown = () => {
-  const item = $('.header__list-item');
+  const btn = $('.header__list-btn');
+  const list = $('.dropdown');
 
+  btn.click(function () {
+    const dropdown = $(this).next('ul');
+    list.removeClass('is-active');
+    btn.removeClass('arrow-down');
 
-  item.click(function () {
-    const dropdown = $(this).find('ul');
-    $('.dropdown').removeClass('is-active');
-
-    if(dropdown.hasClass('is-active')) {
+    if (dropdown.hasClass('visible')) {
       dropdown.removeClass('is-active');
+      $('.dropdown').removeClass('visible');
+      $(this).removeClass('arrow-down');
     } else {
       dropdown.addClass('is-active');
+      dropdown.addClass('visible');
+      $(this).addClass('arrow-down');
     }
 
     $(document).click(function (ev) {
-      if(!item.is(ev.target) && item.has(ev.target).length === 0) {
-        $('.dropdown').removeClass('is-active');
+      if (!btn.is(ev.target) && !list.is(ev.target) && list.has(ev.target).length === 0) {
+        list.removeClass('is-active');
+        btn.removeClass('arrow-down');
       }
     })
   })
 }
 //
 
-$('.dropdown').each(function(index,el) {
+$('.dropdown').each(function (index, el) {
   new SimpleBar(el, {scrollbarMaxSize: 28})
 });
 
@@ -260,16 +265,16 @@ $('.accordion').accordion({
   header: '> .accordion-item > .accordion-header',
 });
 
-$( '.accordion__main' ).accordion( "option", "active", 0 );
+$('.accordion__main').accordion("option", "active", 0);
 //
 
 //Функция переключения табов
-const tabsSwitch = (tab, tabContent) => {
+const tabsSwitch = (tab, tabContent, tabVisible) => {
   $(tab).on('click', function () {
-    $(tab).removeClass("active");
+    $(tab, tabVisible).removeClass("active");
     $(this).toggleClass("active").fadeTo();
     let activeTabContent = $(this).attr("data-target");
-    $(tabContent).removeClass("visible");
+    $(tabContent, tabVisible).removeClass("visible");
     $(activeTabContent).toggleClass("visible");
     if($(window).width() < 577) {
       $('html, body').animate({
@@ -394,7 +399,7 @@ switchSearch();
 toggleDropdown();
 initChoices();
 modalCall();
-tabsSwitch('.artist', '.artist-info');
+tabsSwitch('.artist', '.artist-info', '.country-artists.visible');
 tabsSwitch('.catalog__country-btn', '.country-artists');
 showEvents();
 chooseCategory();

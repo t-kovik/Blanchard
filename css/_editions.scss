@@ -139,9 +139,9 @@
       }
     }
 
-    &:focus {
-      outline: 2px solid $purple79;
-    }
+    //&:focus {
+    //  outline: 2px solid $purple79;
+    //}
 
     &:active {
       color: $purple79;
@@ -188,6 +188,10 @@
 
   input[type='checkbox']:focus + label {
     outline: 2px solid $purple79;
+  }
+
+  input[type='checkbox']:focus:not(.focus-visible) + label {
+    outline: none;
   }
 
   input[type='checkbox']:checked + &__label::before {

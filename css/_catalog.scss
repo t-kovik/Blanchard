@@ -188,6 +188,10 @@
     display: flex;
   }
 
+  &__row {
+    position: relative;
+  }
+
   &__period {
     position: relative;
     padding: 38px 38px 42px 0;
@@ -198,24 +202,13 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
-    transition: border 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out,
+    border-top-color 0.3s ease-in-out;
 
     @media (max-width: 576px) {
       padding: 20px 20px 20.5px 0;
       font-size: 18px;
       line-height: 32px;
-    }
-
-    @media (min-width: 1024px) {
-      &:hover {
-        border: solid $purple;
-        border-width: 1px 0 1px 0;
-
-
-        .ui-accordion-header-icon {
-          background: url(".././img/catalog/arrow-white.svg") center no-repeat $purple;
-        }
-      }
     }
 
     &:focus {
@@ -359,7 +352,8 @@
   height: 50px;
   border-radius: 100%;
   background: url(".././img/catalog/arrow.svg") center no-repeat $whiteEC;
-  transition: background-color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out,
+              transform ease-in-out 0.3s;
 
   @media (max-width: 576px) {
     width: 30px;
@@ -370,11 +364,40 @@
 
 .accordion .ui-accordion-header-active .ui-accordion-header-icon {
   transform: rotate(180deg);
-  transition: transform ease-in-out 0.3s;
+  transition: transform ease-in-out 0.3s,
+              background 0.3s ease-in-out;
 }
 
 .ui-accordion-content-active {
+  position: relative;
+  z-index: 1;
   border-color: $light-purple;
   border-width: 1px 0 1px 0;
   border-style: solid;
+}
+
+.ui-accordion-header {
+  margin-top: -1px;
+}
+
+.ui-accordion-header:hover {
+  transition: border 0.3s ease-in-out;
+  @media (min-width: 1024px) {
+    z-index: 10;
+    border: solid $purple;
+    border-width: 1px 0 1px 0;
+
+    .ui-accordion-header-icon {
+      background: url(".././img/catalog/arrow-white.svg") center no-repeat $purple;
+    }
+  }
+}
+
+.ui-accordion-header-active {
+  transition: border-width 0.3s ease-in-out;
+  @media (min-width: 1024px) {
+    &:hover {
+      border-color: $purple transparent transparent transparent;
+    }
+  }
 }

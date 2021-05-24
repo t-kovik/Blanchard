@@ -217,6 +217,10 @@
       border: 2px solid transparent;
       transition: color 0.3s ease-in-out;
 
+      &.arrow-down svg {
+        transform: rotate(180deg);
+      }
+
       path {
         transition: stroke 0.3s ease-in-out;
       }
@@ -278,11 +282,13 @@
 
 
     &-btn {
+      padding: 3px;
       line-height: 0;
+      border: 2px solid transparent;
+      outline: 0;
 
       &:focus {
-        padding: 3px;
-        outline: 2px solid $purple79;
+        border: 2px solid $purple79;
       }
 
       @media (max-width: 475px) {
@@ -299,6 +305,7 @@
     }
 
     &-input {
+      margin-left: 5px;
       min-width: 220px;
       border-width: 2px 2px 1px 2px;
       border-color: transparent transparent $white transparent;
@@ -307,6 +314,7 @@
       color: $white015;
       caret-color: $light-purple;
       background: transparent;
+      outline: 0;
 
       @media (max-width: 1200px) {
         display: none;
@@ -322,9 +330,7 @@
 
 
       &:focus {
-        margin-left: 5px;
-        outline: 2px solid $purple79;
-        border: 0;
+        border: 2px solid $purple79;
       }
 
       &:active {
@@ -477,4 +483,6 @@ $dropdowns: 'realism', 'impressionism', 'post', 'avant-garde', 'futurism';
 .dropdown.is-active {
   display: block;
 }
+
+
 
