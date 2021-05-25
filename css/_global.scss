@@ -121,6 +121,7 @@ h1, h2, h3, h4, p {
 }
 
 .link {
+  transition: color 0.3s ease-in-out;
   @media all and (min-width: 1024px) {
     &:hover {
       color: $light-purple;

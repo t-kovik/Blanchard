@@ -101,6 +101,13 @@
       border-bottom: 1px solid $purple;
       color: $purple;
       line-height: 30px;
+      transition: border-bottom-color 0.3s ease-in-out;
+
+      @media all and (min-width: 1024px) {
+        &:hover {
+          border-bottom-color: $light-purple;
+        }
+      }
 
       @media (max-width: 1200px) {
         padding-top: 20px;
