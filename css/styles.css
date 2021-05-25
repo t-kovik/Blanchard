@@ -339,13 +339,13 @@ h1, h2, h3, h4, p {
         color: #7943A4; }
   .header__form {
     display: flex; }
+    .header__form rect, .header__form path {
+      transition: fill 0.3s ease-in-out; }
     @media all and (min-width: 1024px) {
-      .header__form {
-        transition: all 0.3s ease-in-out; }
-        .header__form:hover rect, .header__form:hover path {
-          fill: #C283F3; }
-        .header__form:hover .header__form-input {
-          border-bottom-color: #C283F3; } }
+      .header__form:hover rect, .header__form:hover path {
+        fill: #C283F3; }
+      .header__form:hover .header__form-input {
+        border-bottom-color: #C283F3; } }
     .header__form-close {
       display: none;
       margin-left: 24px;
@@ -380,7 +380,8 @@ h1, h2, h3, h4, p {
       color: rgba(255, 255, 255, 0.85);
       caret-color: #C283F3;
       background: transparent;
-      outline: 0; }
+      outline: 0;
+      transition: border-bottom-color 0.3s ease-in-out; }
       @media (max-width: 1200px) {
         .header__form-input {
           display: none; } }

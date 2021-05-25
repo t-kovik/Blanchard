@@ -249,8 +249,11 @@
   &__form {
     display: flex;
 
+    rect, path {
+      transition: fill 0.3s ease-in-out;
+    }
+
     @media all and (min-width: 1024px) {
-      transition: all 0.3s ease-in-out;
       &:hover {
         rect, path {
           fill: $light-purple;
@@ -315,6 +318,7 @@
       caret-color: $light-purple;
       background: transparent;
       outline: 0;
+      transition: border-bottom-color 0.3s ease-in-out;
 
       @media (max-width: 1200px) {
         display: none;
