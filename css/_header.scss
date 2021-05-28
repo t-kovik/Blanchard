@@ -26,8 +26,8 @@
 
     &--bottom {
       position: relative;
-      padding-top: 19px;
-      padding-bottom: 19px;
+      padding-top: 16px;
+      padding-bottom: 16px;
       z-index: 10;
     }
 
@@ -259,8 +259,8 @@
           fill: $light-purple;
         }
 
-        .header__form-input {
-          border-bottom-color: $light-purple;
+        .header__form-label::after {
+          background: $light-purple;
         }
       }
     }
@@ -300,7 +300,21 @@
     }
 
     &-label {
+      position: relative;
       align-items: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        display: block;
+        margin-left: 12px;
+        height: 1px;
+        width: 95%;
+        background: $white;
+        transition: background 0.3s ease-in-out;
+      }
 
       @media (max-width: 768px) {
         margin-left: 6px;
@@ -309,16 +323,15 @@
 
     &-input {
       margin-left: 5px;
+      padding: 6.5px 5px;
       min-width: 220px;
-      border-width: 2px 2px 1px 2px;
-      border-color: transparent transparent $white transparent;
+      border: 0;
       font-size: 18px;
       line-height: 25px;
       color: $white015;
       caret-color: $light-purple;
       background: transparent;
       outline: 0;
-      transition: border-bottom-color 0.3s ease-in-out;
 
       @media (max-width: 1200px) {
         display: none;
@@ -334,7 +347,8 @@
 
 
       &:focus {
-        border: 2px solid $purple79;
+        outline: 2px solid $purple79;
+        z-index: 10;
       }
 
       &:active {

@@ -192,8 +192,8 @@ h1, h2, h3, h4, p {
         padding-bottom: 15px; } }
     .header__container--bottom {
       position: relative;
-      padding-top: 19px;
-      padding-bottom: 19px;
+      padding-top: 16px;
+      padding-bottom: 16px;
       z-index: 10; }
   .header__btn-burger {
     position: relative;
@@ -344,8 +344,8 @@ h1, h2, h3, h4, p {
     @media all and (min-width: 1024px) {
       .header__form:hover rect, .header__form:hover path {
         fill: #C283F3; }
-      .header__form:hover .header__form-input {
-        border-bottom-color: #C283F3; } }
+      .header__form:hover .header__form-label::after {
+        background: #C283F3; } }
     .header__form-close {
       display: none;
       margin-left: 24px;
@@ -366,22 +366,33 @@ h1, h2, h3, h4, p {
       .header__form-btn:focus {
         border: 2px solid #7943A4; }
     .header__form-label {
+      position: relative;
       align-items: center; }
+      .header__form-label::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        display: block;
+        margin-left: 12px;
+        height: 1px;
+        width: 95%;
+        background: #fff;
+        transition: background 0.3s ease-in-out; }
       @media (max-width: 768px) {
         .header__form-label {
           margin-left: 6px; } }
     .header__form-input {
       margin-left: 5px;
+      padding: 6.5px 5px;
       min-width: 220px;
-      border-width: 2px 2px 1px 2px;
-      border-color: transparent transparent #fff transparent;
+      border: 0;
       font-size: 18px;
       line-height: 25px;
       color: rgba(255, 255, 255, 0.85);
       caret-color: #C283F3;
       background: transparent;
-      outline: 0;
-      transition: border-bottom-color 0.3s ease-in-out; }
+      outline: 0; }
       @media (max-width: 1200px) {
         .header__form-input {
           display: none; } }
@@ -392,7 +403,8 @@ h1, h2, h3, h4, p {
         .header__form-input {
           min-width: 180px; } }
       .header__form-input:focus {
-        border: 2px solid #7943A4; }
+        outline: 2px solid #7943A4;
+        z-index: 10; }
       .header__form-input:active {
         outline: 0; }
         .header__form-input:active rect, .header__form-input:active path {
