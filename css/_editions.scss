@@ -122,7 +122,6 @@
   &__label {
     position: relative;
     top: 2px;
-    margin-right: 4px;
     transition: color 0.3s ease-in-out;
 
     &::before {
@@ -139,10 +138,6 @@
       }
     }
 
-    //&:focus {
-    //  outline: 2px solid $purple79;
-    //}
-
     &:active {
       color: $purple79;
 
@@ -150,7 +145,6 @@
         border-color: $purple79;
       }
     }
-
 
     @media (max-width: 576px) {
       border-width: 0 0 1px 0;
@@ -200,6 +194,10 @@
 
   input[type='checkbox']:checked + label {
     color: $light-purple;
+
+    @media (max-width: 576px) {
+      background: url("../img/editions/close.svg") center right no-repeat;
+    }
   }
 
   &__title {
@@ -340,7 +338,6 @@ input[type='checkbox'] {
   height: 1px;
   opacity: 0;
   outline: 0;
-
 }
 
 .swiper-editions {

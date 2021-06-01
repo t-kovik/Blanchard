@@ -269,20 +269,7 @@ $('.accordion__main').accordion("option", "active", 0);
 //
 
 //Функция переключения табов
-const tabsSwitch = (tab, tabContent, tabVisible) => {
-  $(tab).on('click', function () {
-    $(tab, tabVisible).removeClass("active");
-    $(this).toggleClass("active").fadeTo();
-    let activeTabContent = $(this).attr("data-target");
-    $(tabContent, tabVisible).removeClass("visible");
-    $(activeTabContent).toggleClass("visible");
-    if($(window).width() < 577) {
-      $('html, body').animate({
-        scrollTop: $(".catalog__artist.visible").offset().top
-      }, 1000);
-    }
-  });
-}
+
 //
 
 //Функция для показа всех событий в секции "events"
@@ -392,6 +379,21 @@ if ($(window).width() < 577) {
   $('.contacts__map--mobile').appendTo('.contacts__wrapper');
 }
 //
+
+const tabsSwitch = (tab, tabContent, tabVisible) => {
+  $(tab).on('click', function () {
+    $(tab, tabVisible).removeClass("active");
+    $(this).toggleClass("active").fadeTo();
+    let activeTabContent = $(this).attr("data-target");
+    $(tabContent, tabVisible).removeClass("visible");
+    $(activeTabContent).toggleClass("visible");
+    if($(window).width() < 577) {
+      $('html, body').animate({
+        scrollTop: $(".country-artists.visible .catalog__artist.visible").offset().top
+      }, 1000);
+    }
+  });
+}
 
 swiperCall();
 toggleBurger();
