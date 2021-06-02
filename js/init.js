@@ -114,7 +114,7 @@ function swiperCall() {
   })
 
   if ($(window).width() < 577) {
-    const mobileSwiper = new Swiper('.swiper-events', {
+    const mobileSwiper = new Swiper('.events__wrapper', {
       spaceBetween: 15,
       pagination: {
         el: '.swiper-pagination',
