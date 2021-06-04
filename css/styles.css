@@ -176,6 +176,7 @@ h1, h2, h3, h4, p {
 .header {
   position: relative; }
   .header__top {
+    position: relative;
     background-color: #000; }
     .header__top .header__form {
       display: none; }
@@ -350,6 +351,11 @@ h1, h2, h3, h4, p {
       display: none;
       margin-left: 24px;
       margin-bottom: 4px; }
+      @media (max-width: 475px) {
+        .header__form-close {
+          position: absolute;
+          top: -7px;
+          right: -25px; } }
     @media (max-width: 1024px) {
       .header__form-img {
         width: 33px;
@@ -379,6 +385,9 @@ h1, h2, h3, h4, p {
         width: 95%;
         background: #fff;
         transition: background 0.3s ease-in-out; }
+        @media (max-width: 768px) {
+          .header__form-label::after {
+            width: 90%; } }
       @media (max-width: 768px) {
         .header__form-label {
           margin-left: 6px; } }
@@ -399,7 +408,7 @@ h1, h2, h3, h4, p {
       @media (max-width: 768px) {
         .header__form-input {
           min-width: 75vw; } }
-      @media (max-width: 475px) {
+      @media (max-width: 320px) {
         .header__form-input {
           min-width: 180px; } }
       .header__form-input:focus {
@@ -413,9 +422,27 @@ h1, h2, h3, h4, p {
       @media (max-width: 1200px) {
         .header__form-input .visible {
           display: block; } }
+  @media (max-width: 576px) {
+    .header__form.visible {
+      padding-top: 5.5px;
+      padding-bottom: 1.5px; } }
+  @media (max-width: 576px) {
+    .header__form.visible .header__form-btn {
+      position: absolute;
+      bottom: 15px;
+      left: 40px; } }
+  @media (max-width: 475px) {
+    .header__form.visible .header__form-btn {
+      left: 50px; } }
+  @media (max-width: 576px) {
+    .header__form.visible .header__form-label {
+      margin-left: 50px; } }
   .header ::placeholder {
     letter-spacing: 0.5px;
     color: rgba(255, 255, 255, 0.85); }
+    @media (max-width: 576px) {
+      .header ::placeholder {
+        color: transparent; } }
 
 .burger-line {
   position: absolute;
@@ -456,6 +483,10 @@ h1, h2, h3, h4, p {
     transform: rotate(45deg); }
   .close-line:nth-child(2) {
     transform: rotate(-45deg); }
+
+@media (max-width: 576px) {
+  .background-opacity {
+    background: rgba(0, 0, 0, 0.9); } }
 
 @media (max-width: 1200px) {
   .visible {
@@ -922,7 +953,8 @@ h1, h2, h3, h4, p {
       bottom: -40px; } }
   @media (max-width: 475px) {
     .swiper-buttons--gallery {
-      left: 25%; } }
+      left: 50%;
+      transform: translateX(-50%); } }
 
 .choices:focus {
   outline: 2px solid #9D5CD0; }
@@ -1052,6 +1084,12 @@ h1, h2, h3, h4, p {
     margin-right: 10px;
     margin-left: 10px;
     border: 2px solid #9D5CD0; }
+    @media (max-width: 475px) {
+      .catalog__country-btn:active {
+        width: 44px;
+        height: 44px;
+        margin-right: 0;
+        margin-left: 0; } }
   @media (min-width: 1024px) {
     .catalog__country-btn:hover {
       filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7)); } }
@@ -1718,6 +1756,9 @@ input[type='checkbox'] {
   position: relative;
   width: 100%;
   height: 100%; }
+  @media (max-width: 576px) {
+    .tooltip:nth-child(1)::after {
+      left: auto; } }
   .tooltip:focus {
     outline: 2px solid #9D5CD0; }
   .tooltip::after {
@@ -1725,7 +1766,7 @@ input[type='checkbox'] {
     position: absolute;
     left: 50%;
     bottom: calc(100% + 10px);
-    width: 264px;
+    max-width: 264px;
     background: #CACACA;
     padding: 8px 11px;
     color: #fff;

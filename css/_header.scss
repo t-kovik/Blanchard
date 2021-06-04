@@ -4,8 +4,8 @@
   position: relative;
 
   &__top {
+    position: relative;
     background-color: $black;
-
     .header__form {
       display: none;
       @media (max-width: 1200px) {
@@ -247,6 +247,7 @@
   }
 
   &__form {
+    //position: relative;
     display: flex;
 
     rect, path {
@@ -269,6 +270,12 @@
       display: none;
       margin-left: 24px;
       margin-bottom: 4px;
+      
+      @media (max-width: 475px) {
+        position: absolute;
+        top: -7px;
+        right: -25px;
+      }
     }
 
     &-img {
@@ -293,10 +300,6 @@
       &:focus {
         border: 2px solid $purple79;
       }
-
-      @media (max-width: 475px) {
-
-      }
     }
 
     &-label {
@@ -314,6 +317,10 @@
         width: 95%;
         background: $white;
         transition: background 0.3s ease-in-out;
+
+        @media (max-width: 768px) {
+          width: 90%;
+        }
       }
 
       @media (max-width: 768px) {
@@ -341,9 +348,11 @@
         min-width: 75vw;
       }
 
-      @media (max-width: 475px) {
+      @media (max-width: 320px) {
         min-width: 180px;
       }
+
+
 
 
       &:focus {
@@ -368,9 +377,38 @@
     }
   }
 
+  &__form.visible {
+    @media (max-width: 576px) {
+      padding-top: 5.5px;
+      padding-bottom: 1.5px;
+    }
+
+    .header__form-btn {
+      @media (max-width: 576px) {
+        position: absolute;
+        bottom:15px;
+        left: 40px;
+      }
+
+      @media (max-width: 475px) {
+        left: 50px;
+      }
+    }
+
+    .header__form-label {
+      @media (max-width: 576px) {
+        margin-left: 50px;
+      }
+    }
+  }
+
   ::placeholder {
     letter-spacing: 0.5px;
     color: $white015;
+
+    @media (max-width: 576px) {
+      color: transparent;
+    }
   }
 }
 
@@ -425,6 +463,12 @@
 
   &:nth-child(2) {
     transform: rotate(-45deg);
+  }
+}
+
+.background-opacity {
+  @media (max-width: 576px) {
+    background: rgba(0, 0, 0, 0.9);
   }
 }
 

@@ -158,6 +158,10 @@ const switchSearch = () => {
       $('.header__logo').toggle();
     }
     closeSearch.toggleClass('visible');
+    if ($(window).width() < 577) {
+      $('.header__form').toggleClass('visible');
+      $('.header__top').toggleClass('background-opacity');
+    }
   }
 
   const btnSearch = $('.header__form-btn');
@@ -269,7 +273,23 @@ $('.accordion__main').accordion("option", "active", 0);
 //
 
 //Функция переключения табов
+const tabsSwitch = (tab, tabContent, tabVisible) => {
+  $(tab).on('click', function () {
+    $(tab, tabVisible).removeClass("active");
+    $(this).toggleClass("active").fadeTo();
+    let activeTabContent = $(this).attr("data-target");
+    $(tabContent, tabVisible).removeClass("visible");
+    $(activeTabContent).toggleClass("visible");
+  });
+}
 
+$('.artist').click(() => {
+  if($(window).width() < 577) {
+    $('html, body').animate({
+      scrollTop: $(".country-artists.visible .catalog__artist.visible").offset().top
+    },  0, 'linear');
+  }
+})
 //
 
 //Функция для показа всех событий в секции "events"
@@ -380,20 +400,7 @@ if ($(window).width() < 577) {
 }
 //
 
-const tabsSwitch = (tab, tabContent, tabVisible) => {
-  $(tab).on('click', function () {
-    $(tab, tabVisible).removeClass("active");
-    $(this).toggleClass("active").fadeTo();
-    let activeTabContent = $(this).attr("data-target");
-    $(tabContent, tabVisible).removeClass("visible");
-    $(activeTabContent).toggleClass("visible");
-    if($(window).width() < 577) {
-      $('html, body').animate({
-        scrollTop: $(".country-artists.visible .catalog__artist.visible").offset().top
-      }, 1000);
-    }
-  });
-}
+
 
 swiperCall();
 toggleBurger();

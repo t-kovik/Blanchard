@@ -307,7 +307,8 @@
   }
 
   @media (max-width: 475px) {
-    left: 25%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
