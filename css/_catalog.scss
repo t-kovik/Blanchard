@@ -12,10 +12,6 @@
   &__title {
     margin-right: 30px;
 
-    @media (max-width: 768px) {
-      margin-right: 15px;
-    }
-
     @media (max-width: 576px) {
       margin-bottom: 8px;
     }
@@ -58,9 +54,6 @@
   &__country {
     &:not(:last-child) {
       margin-right: 30px;
-      @media (max-width: 768px) {
-        margin-right: 54px;
-      }
 
       @media (max-width: 576px) {
         margin-right: 20px;
@@ -95,6 +88,10 @@
       border: 2px solid transparent;
       transition: filter 0.3s ease-in-out;
       outline: 0;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 0;
+      }
 
       &:focus {
         border: 2px solid $purple;
@@ -142,7 +139,7 @@
     margin-bottom: 39px;
 
     @media (max-width: 768px) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     @media (max-width: 576px) {
@@ -158,6 +155,10 @@
       margin-right: 40px;
       @media (max-width: 1200px) {
         width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 50px;
       }
     }
   }

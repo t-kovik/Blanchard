@@ -20,8 +20,9 @@
     padding-bottom: 30px;
 
     @media (max-width: 475px) {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     &--bottom {
@@ -273,7 +274,7 @@
       
       @media (max-width: 475px) {
         position: absolute;
-        top: -7px;
+        top: -11px;
         right: -25px;
       }
     }
@@ -349,6 +350,7 @@
       }
 
       @media (max-width: 320px) {
+        padding: 4.5px 5px;
         min-width: 180px;
       }
 
@@ -379,8 +381,8 @@
 
   &__form.visible {
     @media (max-width: 576px) {
-      padding-top: 5.5px;
-      padding-bottom: 1.5px;
+      padding-top: 15.5px;
+      padding-bottom: 5.5px;
     }
 
     .header__form-btn {

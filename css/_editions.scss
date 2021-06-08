@@ -76,7 +76,7 @@
     }
 
     @media (max-width: 768px) {
-      padding: 93px 27px 0 17px;
+      padding: 97px 27px 6px 17px;
     }
 
     @media (max-width: 576px) {
@@ -100,6 +100,14 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 27px;
+    }
+
+    @media (max-width: 320px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
@@ -205,6 +213,10 @@
     @media (max-width: 768px) {
       margin-bottom: 16px;
     }
+
+    @media (max-width: 320px) {
+      margin-bottom: 13px;
+    }
   }
 
   &__prices {
@@ -212,7 +224,7 @@
       margin-bottom: 6px;
 
       @media (max-width: 576px) {
-        margin-bottom: 19px;
+        //margin-bottom: 19px;
       }
     }
 
@@ -252,7 +264,7 @@
     margin-bottom: 15px;
 
     @media (max-width: 1200px) {
-      margin-bottom: 21px;
+      margin-bottom: 0;
     }
   }
 
@@ -348,6 +360,10 @@ input[type='checkbox'] {
   @media (max-width: 576px) {
     height: auto;
     padding-left: 0;
+  }
+
+  @media (max-width: 320px) {
+    padding-bottom: 13px;
   }
 }
 

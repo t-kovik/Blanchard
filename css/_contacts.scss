@@ -81,16 +81,20 @@
     font-size: 24px;
     line-height: 32px;
 
-    &:nth-child(2) {
-      @media (max-width: 576px) {
-        margin-bottom: 6px;
-      }
-    }
-
     @media (max-width: 576px) {
       order: 3;
       font-size: 18px;
       line-height: 32px;
+    }
+
+    &--bottom {
+      @media (max-width: 1024px) {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 6px;
+      }
     }
   }
 
@@ -121,6 +125,10 @@
     @media (max-width: 1200px) {
       max-width: 335px;
     }
+
+    @media (max-width: 320px) {
+      margin-bottom: 19px;
+    }
   }
 
   &__form-btn {
@@ -135,6 +143,10 @@
       padding: 10px 35px;
       font-size: 12px;
       line-height: 16px;
+    }
+
+    @media (max-width: 320px) {
+      margin-bottom: 12px;
     }
   }
 
@@ -160,6 +172,10 @@
 
       @media (max-width: 1200px) {
         margin-right: 30px;
+      }
+
+      @media (max-width: 576px) {
+        margin-right: 18px;
       }
     }
 

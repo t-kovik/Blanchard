@@ -10,6 +10,10 @@
     padding: 80px 0 70px 0;
   }
 
+  @media (max-width: 768px) {
+    padding: 80px 0 60px 0;
+  }
+
   @media (max-width: 576px) {
     padding: 50px 0 60px 0;
     margin-bottom: 80px;
@@ -314,6 +318,14 @@
 
 .choices {
   //height: 120px;
+  
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+
+  @media (max-width: 576px) {
+    margin-top: 6px;
+  }
 
   &:focus {
     outline: 2px solid $purple;
