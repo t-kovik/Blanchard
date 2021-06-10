@@ -34,7 +34,8 @@
 
     @media (max-width: 475px) {
       justify-content: center;
-      //margin-bottom: -5px;
+      margin-bottom: 13px;
+      margin-left: -6px;
     }
   }
 
@@ -258,6 +259,7 @@
       flex-wrap: nowrap;
       padding-top: 17px;
       padding-bottom: 19px;
+      padding-left: 0;
       max-height: initial;
     }
 

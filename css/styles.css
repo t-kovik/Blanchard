@@ -1031,7 +1031,9 @@ h1, h2, h3, h4, p {
       margin-bottom: 10px; } }
   @media (max-width: 475px) {
     .catalog__countries {
-      justify-content: center; } }
+      justify-content: center;
+      margin-bottom: 13px;
+      margin-left: -6px; } }
 .catalog__wrapper {
   display: flex; }
   @media (max-width: 768px) {
@@ -1195,6 +1197,7 @@ h1, h2, h3, h4, p {
       flex-wrap: nowrap;
       padding-top: 17px;
       padding-bottom: 19px;
+      padding-left: 0;
       max-height: initial; } }
   .catalog__list-artist {
     margin-right: 10px;
@@ -1303,7 +1306,7 @@ h1, h2, h3, h4, p {
 
 @media (max-width: 320px) {
   .events {
-    margin-bottom: 45px; } }
+    margin-bottom: 41px; } }
 @media (max-width: 576px) {
   .events__title {
     margin-bottom: 12px; } }
@@ -1345,6 +1348,7 @@ h1, h2, h3, h4, p {
     margin-bottom: 5px; }
     @media (max-width: 576px) {
       .events__card-img {
+        margin-bottom: 0;
         width: 100%; } }
   .events__card-place {
     display: flex;
@@ -1357,8 +1361,7 @@ h1, h2, h3, h4, p {
     color: #999; }
     @media (max-width: 576px) {
       .events__card-place {
-        margin-right: 10px;
-        margin-bottom: -5px; } }
+        margin-right: 10px; } }
   .events__card-plate {
     display: flex;
     flex-direction: column;
@@ -1382,7 +1385,7 @@ h1, h2, h3, h4, p {
         line-height: 33px; } }
     @media (max-width: 576px) {
       .events__card-title {
-        margin-bottom: 33px; } }
+        margin-bottom: 37px; } }
   .events__card-link {
     max-width: 92px;
     border-bottom: 1px solid #9D5CD0;
@@ -1424,8 +1427,10 @@ h1, h2, h3, h4, p {
   .is-hidden--mobile {
     display: block; } }
 
-.swiper-events {
+.events__wrapper {
   position: relative; }
+  .events__wrapper .swiper-pagination {
+    padding-top: 5px; }
 
 .swiper-pagination-bullet {
   width: 10px;
