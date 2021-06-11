@@ -15,8 +15,8 @@
   }
 
   @media (max-width: 576px) {
-    padding: 50px 0 60px 0;
-    margin-bottom: 80px;
+    padding: 50px 0 30px 0;
+    margin-bottom: 50px;
   }
 
   &__container {
@@ -107,12 +107,14 @@
     overflow: hidden;
 
     @media (max-width: 768px) {
-      padding-top: 90px;
+      padding-top: 111px;
+      margin-left: -10px;
     }
 
     @media (max-width: 576px) {
       padding-top: 36px;
       padding-left: 0;
+      margin-left: 0;
     }
   }
 
@@ -138,7 +140,7 @@
 
   @media (max-width: 576px) {
     max-height: initial;
-    padding-bottom: 40px;
+    padding-bottom: 43px;
   }
 }
 
