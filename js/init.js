@@ -3,6 +3,7 @@ const burger = $('.header__btn-burger');
 function swiperCall() {
   const swiper = new Swiper('.swiper-container', {
     speed: 2500,
+    effect: 'fade',
     autoplay: {
       delay: 5500,
       disableOnInteraction: false,

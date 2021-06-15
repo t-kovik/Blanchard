@@ -248,8 +248,15 @@
   }
 
   &__form {
-    //position: relative;
     display: flex;
+
+    @media (max-width: 1024px) {
+      max-width: 33px;
+    }
+
+    @media (max-width: 475px) {
+      max-width: 17px;
+    }
 
     rect, path {
       transition: fill 0.3s ease-in-out;
@@ -300,6 +307,11 @@
 
       &:focus {
         border: 2px solid $purple79;
+      }
+      
+      @media (max-width: 1024px) {
+        padding: 0;
+        border: 0;
       }
     }
 
@@ -380,6 +392,10 @@
   }
 
   &__form.visible {
+    @media (max-width: 1024px) {
+      max-width: initial;
+    }
+
     @media (max-width: 576px) {
       padding-top: 15.5px;
       padding-bottom: 5.5px;
@@ -393,13 +409,13 @@
       }
 
       @media (max-width: 475px) {
-        left: 50px;
+        left: 35px;
       }
     }
 
     .header__form-label {
       @media (max-width: 576px) {
-        margin-left: 50px;
+        margin-left: 33px;
       }
     }
   }
