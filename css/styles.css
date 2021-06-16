@@ -1152,7 +1152,7 @@ h1, h2, h3, h4, p {
         width: 100%; } }
     @media (max-width: 768px) {
       .catalog__column:first-child {
-        margin-top: 50px; } }
+        margin-top: 35px; } }
 .catalog__artist {
   max-width: 750px; }
   .catalog__artist.active {
@@ -1252,6 +1252,9 @@ h1, h2, h3, h4, p {
 .artist-info.visible {
   display: block;
   animation: visible 0.5s 1; }
+  @media (max-width: 768px) {
+    .artist-info.visible {
+      padding-top: 15px; } }
 
 .country-artists.visible {
   display: flex;
