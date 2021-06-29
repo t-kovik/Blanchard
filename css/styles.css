@@ -178,11 +178,6 @@ h1, h2, h3, h4, p {
   .header__top {
     position: relative;
     background-color: #000; }
-    .header__top .header__form {
-      display: none; }
-      @media (max-width: 1200px) {
-        .header__top .header__form {
-          display: flex; } }
   .header__container {
     justify-content: space-between;
     padding-top: 30px;
@@ -236,7 +231,7 @@ h1, h2, h3, h4, p {
         padding: 0 30px 30px 30px; } }
     @media (max-width: 475px) {
       .header__menu {
-        top: 45px;
+        top: 41px;
         padding: 0 15px 27px 15px; } }
   .header__nav-list {
     display: flex;
@@ -434,6 +429,11 @@ h1, h2, h3, h4, p {
       @media (max-width: 1200px) {
         .header__form-input .visible {
           display: block; } }
+  .header__form--mobile {
+    display: none; }
+    @media (max-width: 1200px) {
+      .header__form--mobile {
+        display: flex; } }
   @media (max-width: 1024px) {
     .header__form.visible {
       max-width: initial; } }
@@ -870,7 +870,7 @@ h1, h2, h3, h4, p {
     position: relative;
     display: flex;
     margin: 20px;
-    height: 100vh;
+    max-height: 500px;
     max-width: 900px;
     background-color: #fff; }
     @media (max-width: 1024px) {
@@ -1359,8 +1359,7 @@ h1, h2, h3, h4, p {
       grid-column-gap: 0; } }
   @media (max-width: 320px) {
     .events__cards {
-      margin-bottom: 1px;
-      max-height: 683px; } }
+      margin-bottom: 1px; } }
 .events__card {
   background: #fff;
   border: 1px solid #CACACA; }

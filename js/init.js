@@ -207,12 +207,6 @@ $('.dropdown').each(function (index, el) {
   new SimpleBar(el, {scrollbarMaxSize: 28})
 });
 
-//Перенос поиска в верхнюю часть header
-if ($('.header-bottom').css('visibility', 'hidden')) {
-  $('.header__form').appendTo('.header__container')
-}
-//
-
 //Подключение choices
 const initChoices = () => {
   const select = document.querySelector('.gallery__select')

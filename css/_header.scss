@@ -6,12 +6,6 @@
   &__top {
     position: relative;
     background-color: $black;
-    .header__form {
-      display: none;
-      @media (max-width: 1200px) {
-        display: flex;
-      }
-    }
   }
 
   &__container {
@@ -81,7 +75,7 @@
     }
 
     @media (max-width: 475px) {
-      top: 45px;
+      top: 41px;
       padding: 0 15px 27px 15px;
     }
   }
@@ -388,6 +382,13 @@
           display: block;
         }
       }
+    }
+  }
+
+  &__form--mobile {
+    display: none;
+    @media (max-width: 1200px) {
+      display: flex;
     }
   }
 
