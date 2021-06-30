@@ -101,6 +101,7 @@
     &-img {
       filter: grayscale(100%) contrast(0);
       transition: filter 0.3s ease-in-out;
+      max-width: 210px;
       @media (max-width: 576px) {
         width: 54%;
       }

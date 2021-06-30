@@ -316,7 +316,7 @@ h1, h2, h3, h4, p {
       margin-right: 4.75vw; }
       @media (max-width: 1440px) {
         .header__list-item:not(:last-child) {
-          margin-right: 3.75vw; } }
+          margin-right: 3.5vw; } }
     .header__list-btn {
       border: 2px solid transparent;
       transition: color 0.3s ease-in-out; }
@@ -434,6 +434,10 @@ h1, h2, h3, h4, p {
     @media (max-width: 1200px) {
       .header__form--mobile {
         display: flex; } }
+    @media (max-width: 768px) {
+      .header__form--mobile {
+        padding-top: 1px;
+        padding-bottom: 1px; } }
   @media (max-width: 1024px) {
     .header__form.visible {
       max-width: initial; } }
@@ -444,10 +448,11 @@ h1, h2, h3, h4, p {
   @media (max-width: 576px) {
     .header__form.visible .header__form-btn {
       position: absolute;
-      bottom: 15px;
-      left: 40px; } }
+      bottom: 45px;
+      left: 15px; } }
   @media (max-width: 475px) {
     .header__form.visible .header__form-btn {
+      bottom: 15px;
       left: 35px; } }
   @media (max-width: 576px) {
     .header__form.visible .header__form-label {
@@ -505,7 +510,7 @@ h1, h2, h3, h4, p {
 
 @media (max-width: 1200px) {
   .visible {
-    display: block; } }
+    display: flex; } }
 
 .header__list-item {
   position: relative; }
@@ -1803,7 +1808,8 @@ input[type='checkbox'] {
     filter: grayscale(0); }
 .projects__partners-img {
   filter: grayscale(100%) contrast(0);
-  transition: filter 0.3s ease-in-out; }
+  transition: filter 0.3s ease-in-out;
+  max-width: 210px; }
   @media (max-width: 576px) {
     .projects__partners-img {
       width: 54%; } }

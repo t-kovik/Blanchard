@@ -203,7 +203,7 @@
         margin-right: 4.75vw;
 
         @media (max-width: 1440px) {
-          margin-right: 3.75vw;
+          margin-right: 3.5vw;
         }
       }
     }
@@ -390,6 +390,11 @@
     @media (max-width: 1200px) {
       display: flex;
     }
+
+    @media (max-width: 768px) {
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
   }
 
   &__form.visible {
@@ -405,11 +410,12 @@
     .header__form-btn {
       @media (max-width: 576px) {
         position: absolute;
-        bottom:15px;
-        left: 40px;
+        bottom: 45px;
+        left: 15px;
       }
 
       @media (max-width: 475px) {
+        bottom: 15px;
         left: 35px;
       }
     }
@@ -493,7 +499,7 @@
 
 .visible {
   @media (max-width: 1200px) {
-    display: block;
+    display: flex;
   }
 }
 

@@ -152,6 +152,7 @@ const switchSearch = () => {
   const toggleSearch = (ev) => {
     ev.preventDefault();
     $('.header__form-input').toggleClass('visible');
+    $('.header__form').toggleClass('visible').fadeOut(0).fadeIn(500);
 
     if ($(window).width() < 769) {
       burger.toggle();
@@ -160,7 +161,6 @@ const switchSearch = () => {
     }
     closeSearch.toggleClass('visible');
     if ($(window).width() < 577) {
-      $('.header__form').toggleClass('visible');
       $('.header__top').toggleClass('background-opacity');
     }
   }
