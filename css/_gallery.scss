@@ -376,6 +376,17 @@
     min-height: 40px;
     border: 1px solid $white;
     padding: 2.5px 10px 2.5px;
+
+    //&::after {
+    //  content: '';
+    //  display: block;
+    //  position: absolute;
+    //  top: 25%;
+    //  right: 11.5px;
+    //  height: 13px;
+    //  width: 13px;
+    //  background: url('../img/arrow.svg') center no-repeat;
+    //}
   }
 
   &[data-type*=select-one] &__inner {
@@ -397,16 +408,22 @@
   }
 
   &[data-type*=select-one]:after {
-    top: 16.5px;
-    height: 13px;
-    width: 13px;
-    border: 0;
-    background: url('../img/arrow.svg') center no-repeat;
+    //top: 16.5px;
+    //height: 13px;
+    //width: 13px;
+    //border: 0;
+    //background: url('../img/arrow.svg') center no-repeat;
+    display: inline-block;
+    padding: 3px;
+    border-width: 0 1px 1px 0;
+    border-color: $white;
+    transform: rotate(45deg);
+    margin-top: -4.5px;
   }
 
-  &[data-type*=select-one].is-open:after {
-    border: 0;
-    margin-top: 0;
-    transform: rotate(180deg);
+  &[data-type*=select-one].is-open::after {
+    border-color: $white;
+    margin-top: -4.5px;
+    transform: rotate(-135deg);
   }
 }

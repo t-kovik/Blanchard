@@ -111,7 +111,6 @@ function swiperCall() {
         slidesPerView: 1,
       }
     }
-
   })
 
   if ($(window).width() < 577) {
@@ -119,6 +118,7 @@ function swiperCall() {
       spaceBetween: 15,
       pagination: {
         el: '.swiper-pagination',
+        clickable: true,
       },
     })
   }

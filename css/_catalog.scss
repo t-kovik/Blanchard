@@ -365,7 +365,7 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  background: url(".././img/catalog/arrow.svg") center no-repeat $whiteEC;
+  background: url(".././img/catalog/arrow.svg") 50% 45% no-repeat $whiteEC;
   transition: background 0.3s ease-in-out,
               transform ease-in-out 0.3s;
 
@@ -402,7 +402,7 @@
     border-width: 1px 0 1px 0;
 
     .ui-accordion-header-icon {
-      background: url(".././img/catalog/arrow-white.svg") center no-repeat $purple;
+      background: url(".././img/catalog/arrow-white.svg") 50% 45% no-repeat $purple;
     }
   }
 }
