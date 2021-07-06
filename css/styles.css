@@ -1031,6 +1031,7 @@ h1, h2, h3, h4, p {
   transform: rotate(45deg);
   margin-top: -4.5px; }
 .choices[data-type*=select-one].is-open::after {
+  top: 21px;
   border-color: #fff;
   margin-top: -4.5px;
   transform: rotate(-135deg); }
@@ -1865,16 +1866,19 @@ input[type='checkbox'] {
   padding: 0 75px;
   min-width: 0;
   overflow: hidden; }
-  .swiper-partners::before {
+  .swiper-partners::before, .swiper-partners::after {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
     display: block;
     width: 25px;
     height: 100%;
     background-color: #fff;
     z-index: 9; }
+  .swiper-partners::after {
+    right: 0; }
+  .swiper-partners::before {
+    left: 0; }
   @media (max-width: 1200px) {
     .swiper-partners {
       padding: 0 54px; } }

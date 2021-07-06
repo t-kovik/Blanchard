@@ -45,14 +45,6 @@
       }
     }
 
-    &-list {
-      //overflow: hidden;
-    }
-
-    &-link {
-
-    }
-
     &-item {
       display: flex;
       align-items: center;
@@ -180,16 +172,23 @@
   min-width: 0;
   overflow: hidden;
 
-  &::before {
+  &::before, &::after {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
     display: block;
     width: 25px;
     height: 100%;
     background-color: $white;
     z-index: 9;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &::before {
+    left: 0;
   }
 
   @media (max-width: 1200px) {
