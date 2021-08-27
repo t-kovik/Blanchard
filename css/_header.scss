@@ -1,0 +1,577 @@
+@import "_colors";
+
+.header {
+  position: relative;
+
+  &__top {
+    position: relative;
+    background-color: $black;
+  }
+
+  &__container {
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (max-width: 475px) {
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &--bottom {
+      position: relative;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      z-index: 10;
+    }
+
+  }
+
+  &__btn-burger {
+    position: relative;
+    display: none;
+    width: 36px;
+    height: 28px;
+
+    @media all and (max-width: 1200px) {
+      display: block;
+    }
+
+    @media all and (max-width: 475px) {
+      width: 20px;
+      height: 16px;
+    }
+  }
+
+  &__btn-close {
+    position: relative;;
+    width: 36px;
+    height: 28px;
+    display: none;
+
+    @media (max-width: 475px) {
+      width: 20px;
+      height: 16px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    @media (max-width: 1200px) {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      display: none;
+      padding: 0 50px 46px 50px;
+      width: 100%;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.9);
+      overflow-y: auto;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 30px 30px 30px;
+    }
+
+    @media (max-width: 475px) {
+      top: 41px;
+      padding: 0 15px 27px 15px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    font-size: 18px;
+    line-height: 25px;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 115px;
+      font-size: 24px;
+      line-height: 63px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+      line-height: 32px;
+    }
+
+    @media (max-width: 475px) {
+      margin-bottom: 17px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 3vw;
+      @media all and (max-width: 1200px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__nav-link {
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__btn {
+    margin-left: 14.6vw;
+    font-size: 18px;
+    line-height: 25px;
+    transition: color 0.3s ease-in-out;
+
+    @media (max-width: 1440px) {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 1200px) {
+      padding: 19px 90px;
+      border: 2px solid $purple;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 10px 30px;
+    }
+
+    @media (max-width: 475px) {
+      padding: 7px 20px;
+    }
+
+    path {
+      transition: fill 0.3s ease-in-out;
+    }
+
+    @media all and (min-width: 1024px) {
+      &:hover {
+        color: $light-purple;
+
+        path {
+          fill: $light-purple;
+        }
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $purple79;
+    }
+
+    &:active {
+      outline: 0;
+      color: $purple;
+
+      path {
+        fill: $purple;
+      }
+    }
+  }
+
+  &__container--bottom {
+    @media all and (max-width: 1200px) {
+      padding: 0;
+      width: 0;
+    }
+
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 10;
+    max-height: 70px;
+    background: rgba(0, 0, 0, 0.4);
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+
+    @media all and (max-width: 1200px) {
+      display: none;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 4.75vw;
+
+        @media (max-width: 1440px) {
+          margin-right: 3.5vw;
+        }
+      }
+    }
+
+    &-btn {
+      border: 2px solid transparent;
+      transition: color 0.3s ease-in-out;
+
+      &.arrow-down svg {
+        transform: rotate(180deg);
+      }
+
+      path {
+        transition: stroke 0.3s ease-in-out;
+      }
+
+      @media all and (min-width: 1024px) {
+        &:hover {
+          color: $purple;
+
+          & path {
+            stroke: $purple;
+          }
+        }
+      }
+
+      &:focus {
+        outline: 2px solid $purple79;
+      }
+
+      &:active {
+        outline: 0;
+        color: $purple79;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+
+    @media (max-width: 1024px) {
+      max-width: 33px;
+    }
+
+    @media (max-width: 475px) {
+      max-width: 17px;
+    }
+
+    rect, path {
+      transition: fill 0.3s ease-in-out;
+    }
+
+    @media all and (min-width: 1024px) {
+      &:hover {
+        rect, path {
+          fill: $light-purple;
+        }
+
+        .header__form-label::after {
+          background: $light-purple;
+        }
+      }
+    }
+
+    &-close {
+      display: none;
+      margin-left: 24px;
+      margin-bottom: 4px;
+      
+      @media (max-width: 475px) {
+        position: absolute;
+        top: -11px;
+        right: -25px;
+      }
+    }
+
+    &-img {
+      @media (max-width: 1024px) {
+        width: 33px;
+        height: 27px;
+      }
+
+      @media (max-width: 475px) {
+        width: 17px;
+        height: 15px;
+      }
+    }
+
+
+    &-btn {
+      padding: 3px;
+      line-height: 0;
+      border: 2px solid transparent;
+      outline: 0;
+
+      &:focus {
+        border: 2px solid $purple79;
+      }
+      
+      @media (max-width: 1024px) {
+        padding: 0;
+        border: 0;
+      }
+    }
+
+    &-label {
+      position: relative;
+      align-items: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        display: block;
+        margin-left: 12px;
+        height: 1px;
+        width: 95%;
+        background: $white;
+        transition: background 0.3s ease-in-out;
+
+        @media (max-width: 768px) {
+          width: 90%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-left: 6px;
+      }
+    }
+
+    &-input {
+      margin-left: 5px;
+      padding: 6.5px 5px;
+      min-width: 220px;
+      border: 0;
+      font-size: 18px;
+      line-height: 25px;
+      color: $white015;
+      caret-color: $light-purple;
+      background: transparent;
+      outline: 0;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        min-width: 75vw;
+      }
+
+      @media (max-width: 320px) {
+        padding: 4.5px 5px;
+        min-width: 180px;
+      }
+
+
+
+
+      &:focus {
+        outline: 2px solid $purple79;
+        z-index: 10;
+      }
+
+      &:active {
+        outline: 0;
+
+        rect, path {
+          fill: $light-purple;
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+
+      .visible {
+        @media (max-width: 1200px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__form--mobile {
+    display: none;
+    @media (max-width: 1200px) {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+  }
+
+  &__form.visible {
+    @media (max-width: 1024px) {
+      max-width: initial;
+    }
+
+    @media (max-width: 576px) {
+      padding-top: 15.5px;
+      padding-bottom: 5.5px;
+    }
+
+    .header__form-btn {
+      @media (max-width: 576px) {
+        position: absolute;
+        bottom: 45px;
+        left: 15px;
+      }
+
+      @media (max-width: 475px) {
+        bottom: 15px;
+        left: 35px;
+      }
+    }
+
+    .header__form-label {
+      @media (max-width: 576px) {
+        margin-left: 33px;
+      }
+    }
+  }
+
+  ::placeholder {
+    letter-spacing: 0.5px;
+    color: $white015;
+
+    @media (max-width: 576px) {
+      color: transparent;
+    }
+  }
+}
+
+.burger-line {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: $white;
+  transition: width 0.15s;
+  border: 0;
+
+  &:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+
+  &:nth-child(2) {
+    top: 50%;
+    left: 0;
+    width: 75%;
+    transform: translateY(-50%);
+    border: 0;
+  }
+
+  &:nth-child(3) {
+    left: 0;
+    bottom: 0;
+    width: 60%;
+  }
+
+  @media (max-width: 475px) {
+    height: 2px;
+  }
+}
+
+.close-line {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 100%;
+  height: 2px;
+  background-color: $white;
+
+  @media (max-width: 475px) {
+    top: 7px;
+  }
+
+  &:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+}
+
+.background-opacity {
+  @media (max-width: 576px) {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.visible {
+  @media (max-width: 1200px) {
+    display: flex;
+  }
+}
+
+.header__list-item {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: none;
+  padding: 40px;
+  max-height: 300px;
+  min-width: 300px;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown__item {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+$dropdowns: 'realism', 'impressionism', 'post', 'avant-garde', 'futurism';
+
+@mixin dropdown($dropdown-name, $icon, $number) {
+  .dropdown__#{$dropdown-name}-item:nth-child(#{$number}) {
+    background: url("../img/header/#{$dropdown-name}/#{$icon}.jpg") center no-repeat;
+  }
+}
+
+@for $y from 1 through 5 {
+  @for $i from 1 to 5 {
+    @include dropdown(nth($dropdowns, $y), $i, $i);
+  }
+}
+
+.dropdown__artist-item {
+  background: url("../img/header/realism/1.jpg") center no-repeat;
+}
+
+.dropdown__link {
+  padding-left: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.simplebar-track.simplebar-vertical {
+  margin-right: 19px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 2px;
+  background-color: $black;
+}
+
+.simplebar-scrollbar::before {
+  top: 0;
+  left: 0;
+  background: $white;
+  opacity: 1;
+  width: 2px;
+}
+
+.dropdown.is-active {
+  display: block;
+}
+
+
+

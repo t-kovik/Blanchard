@@ -1,0 +1,417 @@
+@import "_colors";
+
+.catalog {
+  @media (max-width: 768px) {
+    margin-bottom: 69px;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 52px;
+  }
+
+  &__title {
+    margin-right: 30px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__countries {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+
+    @media (max-width: 1200px) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+
+    }
+
+    @media (max-width: 475px) {
+      justify-content: center;
+      margin-bottom: 13px;
+      margin-left: -6px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+
+  }
+
+  &__country {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @media (max-width: 576px) {
+        margin-right: 20px;
+      }
+    }
+
+    $countries: 'fr', 'de', 'it', 'ru', 'bel';
+
+    @mixin country($country-name) {
+      & {
+        &-btn--#{$country-name} {
+          background: url("../img/catalog/#{$country-name}.png") center no-repeat;
+
+          @media (max-width: 475px) {
+            background-size: 32px 32px;
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through 5 {
+      @include country(nth($countries, $i));
+    }
+
+    &-btn {
+      position: relative;
+      display: block;
+      width: 66px;
+      height: 66px;
+      margin-bottom: 5px;
+      border-radius: 100%;
+      border: 2px solid transparent;
+      transition: filter 0.3s ease-in-out;
+      outline: 0;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 0;
+      }
+
+      &:focus {
+        border: 2px solid $purple;
+        border-radius: 100%;
+      }
+
+      &:active {
+        width: 46px;
+        height: 46px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border: 2px solid $purple;
+
+        @media (max-width: 475px) {
+          width: 44px;
+          height: 44px;
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        &:hover {
+          filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+        }
+      }
+
+      @media (max-width: 475px) {
+        width: 44px;
+        height: 44px;
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-btn.active {
+      border: 2px solid $purple;
+    }
+  }
+
+  &__text {
+    max-width: 1080px;
+    margin-bottom: 39px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &__column {
+    width: 100%;
+
+    &:first-child {
+      width: 94%;
+      margin-right: 40px;
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  &__artist {
+    max-width: 750px;
+
+    &.active {
+      color: $purple;
+    }
+
+    &-pic {
+      margin-bottom: 20px;
+
+      @media (max-width: 576px) {
+        margin-bottom: 13px;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    &-years {
+      font-size: 12px;
+      line-height: 16px;
+      color: $gray99;
+    }
+
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__row {
+    position: relative;
+  }
+
+  &__period {
+    position: relative;
+    padding: 38px 38px 42px 0;
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+    border-top-color: $grayCA;
+    border-bottom-color: transparent;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    transition: border 0.3s ease-in-out,
+    border-top-color 0.3s ease-in-out;
+
+    @media (max-width: 576px) {
+      padding: 20px 20px 20.5px 0;
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    &:focus {
+      outline: 2px solid $purple79;
+    }
+
+    &:active {
+      border: solid $purple79;
+      border-width: 1px 0 1px 0;
+      transition: border 0.3s ease-in-out;
+
+      .ui-accordion-header-icon {
+        background: url(".././img/catalog/arrow-white.svg") center no-repeat $purple79;
+      }
+    }
+
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 24px 40px 27px 10px;
+    width: 100%;
+    max-height: 342px;
+    overflow-x: auto;
+
+    @media (max-width: 1200px) {
+      padding: 25px 0 28px 10px;
+      max-height: 460px;
+    }
+
+    @media (max-width: 768px) {
+      max-height: 343px;
+    }
+
+    @media (max-width: 576px) {
+      flex-wrap: nowrap;
+      padding-top: 17px;
+      padding-bottom: 19px;
+      padding-left: 0;
+      max-height: initial;
+    }
+
+    &-artist {
+      margin-right: 10px;
+      color: $color-main;
+      font-size: 16px;
+      line-height: 32px;
+      transition: color 0.3s ease-in-out,
+      text-shadow 0.3s ease-in-out,
+      border 0.3s ease-in-out;
+
+      @media (min-width: 1024px) {
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-bottom-color: $purple;
+          text-shadow: 1px 0 0 $purple;
+          color: $purple;
+        }
+      }
+
+      &:focus {
+        outline: 2px solid $purple79;
+      }
+
+      &:active {
+        color: $purple79;
+      }
+    }
+  }
+}
+
+.artist {
+  position: relative;
+  cursor: pointer;
+
+  &.active {
+    .catalog__list-artist {
+      color: $purple;
+      text-shadow: 1px 0 0 $purple;
+    }
+  }
+}
+
+.artist-info,
+.country-artists {
+  display: none;
+}
+
+.artist-info.visible {
+  display: block;
+  animation: visible 0.5s 1;
+
+  @media (max-width: 768px) {
+    padding-top: 15px;
+  }
+}
+
+.country-artists.visible {
+  display: flex;
+  animation: visible 0.5s 1;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.accordion:nth-child(2) {
+  .accordion-header {
+    padding-bottom: 42px;
+
+    @media (max-width: 576px) {
+      padding-bottom: 18px;
+    }
+  }
+}
+
+.accordion-item {
+  outline: 0;
+}
+
+.accordion .ui-accordion-header {
+  position: relative;
+}
+
+.accordion .ui-accordion-header-icon {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: url(".././img/catalog/arrow.svg") 50% 45% no-repeat $whiteEC;
+  transition: background 0.3s ease-in-out,
+              transform ease-in-out 0.3s;
+
+  @media (max-width: 576px) {
+    width: 30px;
+    height: 30px;
+    background-size: 38%;
+  }
+}
+
+.accordion .ui-accordion-header-active .ui-accordion-header-icon {
+  transform: rotate(180deg);
+  transition: transform ease-in-out 0.3s,
+              background 0.3s ease-in-out;
+}
+
+.ui-accordion-content-active {
+  position: relative;
+  z-index: 1;
+  border-color: $light-purple;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+}
+
+.ui-accordion-header {
+  margin-top: -1px;
+}
+
+.ui-accordion-header:hover {
+  transition: border 0.3s ease-in-out;
+  @media (min-width: 1024px) {
+    z-index: 10;
+    border: solid $purple;
+    border-width: 1px 0 1px 0;
+
+    .ui-accordion-header-icon {
+      background: url(".././img/catalog/arrow-white.svg") 50% 45% no-repeat $purple;
+    }
+  }
+}
+
+.ui-accordion-header-active {
+  transition: border-width 0.3s ease-in-out;
+  @media (min-width: 1024px) {
+    &:hover {
+      border-color: $purple transparent transparent transparent;
+    }
+  }
+}
